@@ -66,7 +66,7 @@ export default function Navbar() {
                 item.current
                   ? "bg-blue-900 text-white"
                   : "text-gray-300 hover:bg-gray-700 hover:text-white",
-                "rounded-md px-3 py-2 sm:text-sm md:text-md lg:text-xl font-medium flex items-center h-4/5"
+                "rounded-md px-3 py-10 sm:text-sm md:text-md lg:text-xl font-medium flex items-center h-4/5 text-center"
               )}
               aria-current={item.current ? "page" : undefined}
               onClick={() => handleNavItemClick(item.name)}

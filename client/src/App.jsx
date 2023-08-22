@@ -15,6 +15,7 @@ import ContactUs from "./pages/ContactUs";
 import NetVRTheater from "./pages/NetVRTheater";
 import News from "./pages/News";
 import TheTeam from "./pages/TheTeam";
+import Footer from "./components/Footer";
 
 function Routing() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Router>
         <Navbar />
         <Routing />
+        <Footer />
       </Router>
     </>
   );
