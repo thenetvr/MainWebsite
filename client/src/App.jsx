@@ -17,9 +17,6 @@ import News from "./pages/News";
 import TheTeam from "./pages/TheTeam";
 
 function Routing() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
   return (
     <Routes>
       <Route path="/" element={<TheTeam />} />
