@@ -15,12 +15,14 @@ app.use(cors({ origin: true, credentials: true }));
 // middleware
 
 // routes
+app.use(require("./routes"))
+
 
 // port
-const port = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
 // listener
-const server = app.listen(port, () => {
-  console.log(`Sever is running on port ${port}`);
-  console.log(`Sever is running on http://localhost:${port}`);
+const server = app.listen(PORT, () => {
+  console.log(`Sever is running on port ${PORT}`);
+  console.log(`Sever is running on http://localhost:${PORT}`);
 });
