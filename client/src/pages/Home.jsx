@@ -1,5 +1,8 @@
 import Footer from "../components/Footer";
 import HomeLogo from "../assets/Home-logo.png";
+// framer motion
+import { motion } from "framer-motion";
+import { pageVariants } from "../utils/framerMotionVariants";
 
 export default function Home() {
   // replace for any other pathname
@@ -7,14 +10,20 @@ export default function Home() {
 
   return (
     <div className="bg-slate-800 h-max">
-      <div className="flex flex-col items-center h-screen">
+      <motion.div
+        className="flex flex-col items-center h-screen"
+        variants={pageVariants}
+        initial="hidden"
+        animate="visible"
+        exit="exit"
+      >
         <div className="flex justify-center items-center h-3/6 bg-black w-full mt-1">
           <img src={HomeLogo} width={400} alt="Home Logo" />
         </div>
         <div>
           <div>test</div>
         </div>
-      </div>
+      </motion.div>
       <Footer />
     </div>
   );
