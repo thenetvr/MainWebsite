@@ -1,5 +1,11 @@
 import React from "react";
+import Footer from "../components/Footer";
 
 export default function TheTeam() {
-  return <div>TheTeam</div>;
+  return (
+    <div>
+      TheTeam
+      <Footer />
+    </div>
+  );
 }
