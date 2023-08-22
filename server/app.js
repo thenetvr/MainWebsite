@@ -10,7 +10,7 @@ const app = express();
 
 // db
 app.use(morgan("dev"));
-app.use(cors ({origin: true, credentials: true}));
+app.use(cors({ origin: true, credentials: true }));
 
 // middleware
 
@@ -20,4 +20,7 @@ app.use(cors ({origin: true, credentials: true}));
 const port = process.env.PORT || 8080;
 
 // listener
-const server = app.listen(port, () => console.log(`Sever is running onport ${port}`));
+const server = app.listen(port, () => {
+  console.log(`Sever is running on port ${port}`);
+  console.log(`Sever is running on http://localhost:${port}`);
+});
