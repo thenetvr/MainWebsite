@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 // function to join classnames
 function classNames(...classes) {
@@ -38,9 +39,9 @@ export default function Navbar() {
       </div>
       <div className="flex space-x-4 p-7 items-center">
         {navigation.map((item) => (
-          <a
+          <Link
             key={item.name}
-            href={item.href}
+            to={item.href}
             className={classNames(
               item.current
                 ? "bg-blue-900 text-white"
@@ -51,7 +52,7 @@ export default function Navbar() {
             onClick={() => handleNavItemClick(item.name)}
           >
             {item.name}
-          </a>
+          </Link>
         ))}
       </div>
     </div>
