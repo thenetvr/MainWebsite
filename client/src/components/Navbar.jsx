@@ -1,11 +1,4 @@
-const navigation = [
-  { name: "Influencer Program", href: "#", current: true },
-  { name: "Creators", href: "#", current: false },
-  { name: "Contact Us", href: "#", current: false },
-  { name: "NetVR Theater", href: "#", current: false },
-  { name: "News", href: "#", current: false },
-  { name: "The Team", href: "#", current: false },
-];
+import { useState } from "react";
 
 // function to join classnames
 function classNames(...classes) {
@@ -13,6 +6,26 @@ function classNames(...classes) {
 }
 
 export default function Navbar() {
+  const [navigation, setNavigation] = useState([
+    { name: "Influencer Program", href: "/influencer-program", current: true },
+    { name: "Creators", href: "/creators", current: false },
+    { name: "Contact Us", href: "/contact-us", current: false },
+    { name: "NetVR Theater", href: "/net-vr-theater", current: false },
+    { name: "News", href: "/news", current: false },
+    { name: "The Team", href: "/the-team", current: false },
+  ]);
+
+  const handleNavItemClick = (itemName) => {
+    setNavigation(
+      [...navigation].map((object) => {
+        if (object.name === itemName) {
+          return { ...object, current: true };
+        }
+        return { ...object, current: false };
+      })
+    );
+  };
+
   return (
     <div className="hidden sm:flex md:flex bg-slate-950 justify-between h-28">
       <div className="space-x-4 p-7 flex items-center">
@@ -30,11 +43,12 @@ export default function Navbar() {
             href={item.href}
             className={classNames(
               item.current
-                ? "bg-gray-900 text-white"
+                ? "bg-blue-900 text-white"
                 : "text-gray-300 hover:bg-gray-700 hover:text-white",
               "rounded-md px-3 py-2 sm:text-sm md:text-md lg:text-xl font-medium flex items-center h-4/5"
             )}
             aria-current={item.current ? "page" : undefined}
+            onClick={() => handleNavItemClick(item.name)}
           >
             {item.name}
           </a>
