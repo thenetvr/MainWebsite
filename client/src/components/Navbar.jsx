@@ -52,8 +52,8 @@ export default function Navbar() {
   };
 
   return (
-    <div className="sticky top-0">
-      <div className="flex bg-slate-950 justify-between h-28">
+    <div className="sticky top-0 z-50">
+      <div className="flex bg-black justify-between h-28">
         <div className="space-x-4 p-7 flex items-center">
           {/* replace image */}
           <Link
