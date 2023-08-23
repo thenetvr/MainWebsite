@@ -6,12 +6,13 @@ export const pageVariants = {
     opacity: 1,
     // apply 'transition' with variants
     transition: {
+      delay: 0.5,
       type: "spring",
     },
   },
   // 'exit' animation / animating routes
   exit: {
-    x: "-100vw",
+    opacity: 0,
     transition: {
       ease: "easeInOut",
     },

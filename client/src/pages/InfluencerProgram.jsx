@@ -13,7 +13,7 @@ export default function InfluencerProgram() {
           animate="visible"
           exit="exit"
         >
-          Contact Us
+          Influencer Program
         </motion.div>
       </div>
       <Footer />

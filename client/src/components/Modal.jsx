@@ -44,7 +44,7 @@ export default function Modal({ navigation, handleNavItemClick }) {
                         to={item.href}
                         className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                         onClick={() => {
-                          handleNavItemClick(item.name);
+                          handleNavItemClick(item.href);
                         }}
                       >
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center text-white sm:h-12 sm:w-12">

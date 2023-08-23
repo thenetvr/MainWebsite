@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import MobileNavbar from "./Modal";
 
@@ -15,7 +15,7 @@ export default function Navbar() {
     {
       name: "Influencer Program",
       href: "/influencer-program",
-      current: true,
+      current: false,
       icon: IconOne,
     },
     { name: "Creators", href: "/creators", current: false, icon: IconTwo },
@@ -35,10 +35,15 @@ export default function Navbar() {
     { name: "The Team", href: "/the-team", current: false, icon: IconThree },
   ]);
 
-  const handleNavItemClick = (itemName) => {
+  // randle refresh
+  useEffect(() => {
+    handleNavItemClick(window.location.pathname);
+  }, []);
+
+  const handleNavItemClick = (itemHref) => {
     setNavigation(
       [...navigation].map((object) => {
-        if (object.name === itemName) {
+        if (object.href === itemHref) {
           return { ...object, current: true };
         }
         return { ...object, current: false };
@@ -54,7 +59,7 @@ export default function Navbar() {
           <Link
             to="/"
             onClick={() => {
-              handleNavItemClick("Home");
+              handleNavItemClick("/");
             }}
           >
             <img
@@ -76,7 +81,7 @@ export default function Navbar() {
                 "rounded-md px-3 py-10 sm:text-sm md:text-md lg:text-xl font-medium flex items-center h-4/5 text-center"
               )}
               aria-current={item.current ? "page" : undefined}
-              onClick={() => handleNavItemClick(item.name)}
+              onClick={() => handleNavItemClick(item.href)}
             >
               {item.name}
             </Link>

@@ -1,6 +1,11 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 
 // pages
 import InfluencerProgram from "./pages/InfluencerProgram";
@@ -10,19 +15,24 @@ import ContactUs from "./pages/ContactUs";
 import NetVRTheater from "./pages/NetVRTheater";
 import News from "./pages/News";
 import TheTeam from "./pages/TheTeam";
+import { AnimatePresence } from "framer-motion";
 
 function Routing() {
+  const location = useLocation();
+
   return (
-    <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route path="/influencer-program" element={<InfluencerProgram />} />
-      <Route path="/creators" element={<Creators />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="/net-vr-theater" element={<NetVRTheater />} />
-      <Route path="/news" element={<News />} />
-      <Route path="/the-team" element={<TheTeam />} />
-      <Route path="*" element={<Home />} />
-    </Routes>
+    <AnimatePresence>
+      <Routes location={location} key={location.key}>
+        <Route exact path="/" element={<Home />} />
+        <Route path="/influencer-program" element={<InfluencerProgram />} />
+        <Route path="/creators" element={<Creators />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/net-vr-theater" element={<NetVRTheater />} />
+        <Route path="/news" element={<News />} />
+        <Route path="/the-team" element={<TheTeam />} />
+        <Route path="*" element={<Home />} />
+      </Routes>
+    </AnimatePresence>
   );
 }
 
