@@ -38,12 +38,12 @@ function Routing() {
 
 function App() {
   return (
-    <>
+    <div className="h-screen z-0 overflow-y-auto overflow-x-hidden scroll-smooth scrollbar-firefox md:scrollbar">
       <Router>
         <Navbar />
         <Routing />
       </Router>
-    </>
+    </div>
   );
 }
 
