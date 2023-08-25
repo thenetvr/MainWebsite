@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "develop": "concurrently \"cd server && node --watch app\" \"cd client && npm run start\"",
+    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run start\""
+  },
+  "dependencies": {
+    "concurrently": "^8.0.1",
+    "react-hook-form": "^7.45.4"
+  }
+}
