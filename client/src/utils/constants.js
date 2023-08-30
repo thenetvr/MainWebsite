@@ -27,7 +27,34 @@ export const usageData = [
   "We may also collect information that your browser sends whenever you visit our service or when you access the service by or through a mobile device."
 ]
 
-export const SocialMediaData = [
+export const socialMediaData = [
   `If You decide to register through or otherwise grant us access to a Third-Party Social Media Service, We may collect Personal data that is already associated with Your Third-Party Social Media Service's account, such as Your name, Your email address, Your activities or Your contact list associated with that account.`,
   `You may also have the option of sharing additional information with the Company through Your Third-Party Social Media Service's account. If You choose to provide such information and Personal Data, during registration or otherwise, You are giving the Company permission to use, share, and store it in a manner consistent with this Privacy Policy.`
 ]
+
+export const cookies = {
+  points: [
+    `Cookies or Browser Cookies. A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.`,
+    `Web Beacons. Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).`
+  ],
+  purposes: [
+    {
+      name: "Necessary / Essential Cookies",
+      type: "Persistent Cookies",
+      administeredBy: "Us",
+      purpose: "These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services."
+    },
+    {
+      name: "Cookies Policy / Notice Acceptance Cookies",
+      type: "Session Cookies",
+      administeredBy: "Us",
+      purpose: "These Cookies identify if users have accepted the use of cookies on the Website."
+    },
+    {
+      name: "Functionality Cookies",
+      type: "Persistent Cookies",
+      administeredBy: "Us",
+      purpose: "These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website."
+    },
+  ]
+}

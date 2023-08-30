@@ -5,10 +5,11 @@ import { pageVariants } from "../utils/framerMotionVariants";
 
 // constants
 import {
-  SocialMediaData,
+  socialMediaData,
   definitions,
   personalData,
   usageData,
+  cookies,
 } from "../utils/Constants";
 
 export default function Policy() {
@@ -127,8 +128,8 @@ export default function Policy() {
                 )
               )}
             </ul>
-            {SocialMediaData &&
-              SocialMediaData.map((point, idx) => (
+            {socialMediaData &&
+              socialMediaData.map((point, idx) => (
                 <p key={idx} className="text-sm">
                   {point}
                 </p>
@@ -138,6 +139,47 @@ export default function Policy() {
           {/* Tracking Technology and Cookies */}
           <div className="py-7">
             <h1 className={header}>Tracking Technology and Cookies</h1>
+            <p className="text-sm">
+              We use Cookies and similar tracking technologies to track the
+              activity on Our Service and store certain information. Tracking
+              technologies used are beacons, tags, and scripts to collect and
+              track information and to improve and analyze Our Service. The
+              technologies We use may include:{" "}
+            </p>
+            <ul className={listEl}>
+              {cookies &&
+                cookies.points.map((point, idx) => (
+                  <li key={idx} className="text-sm">
+                    {point}
+                  </li>
+                ))}
+            </ul>
+            <p className="text-sm">
+              Cookies can be "Persistent" or "Session" Cookies. Persistent
+              Cookies remain on Your personal computer or mobile device when You
+              go offline, while Session Cookies are deleted as soon as You close
+              Your web browser.
+            </p>
+            <p className="text-sm">
+              We use both Session and Persistent Cookies for the purposes set
+              out below:
+            </p>
+            <ul className={listEl}>
+              {cookies &&
+                cookies.purposes.map((purpose, idx) => (
+                  <li key={idx} className="text-sm">
+                    <p>{purpose.name}</p>
+                    <p>Type: {purpose.type}</p>
+                    <p>Administered By: {purpose.administeredBy}</p>
+                    <p>Purpose: {purpose.purpose}</p>
+                  </li>
+                ))}
+            </ul>
+            <p className="text-sm">
+              For more information about the cookies we use and your choices
+              regarding cookies, please visit our Cookies Policy or the Cookies
+              section of our Privacy Policy.
+            </p>
           </div>
         </motion.div>
       </div>
