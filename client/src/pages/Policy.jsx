@@ -10,6 +10,7 @@ import {
   personalData,
   usageData,
   cookies,
+  useOfPersonalData,
 } from "../utils/Constants";
 
 export default function Policy() {
@@ -180,6 +181,35 @@ export default function Policy() {
               regarding cookies, please visit our Cookies Policy or the Cookies
               section of our Privacy Policy.
             </p>
+          </div>
+
+          {/* Use of Your Personal Data */}
+          <div className="py-7">
+            <h1 className={header}>Use of Your Personal Data</h1>
+            <p className="text-sm">
+              The Company may use Personal Data for the following purposes:
+            </p>
+            <ul className={listEl}>
+              {useOfPersonalData &&
+                useOfPersonalData.section1.map((point, idx) => (
+                  <li key={idx} className="text-sm">
+                    {point}
+                  </li>
+                ))}
+            </ul>
+            <p className="text-sm">
+              {" "}
+              We may share Your personal information in the following
+              situations:
+            </p>
+            <ul className={listEl}>
+              {useOfPersonalData &&
+                useOfPersonalData.section2.map((point, idx) => (
+                  <li key={idx} className="text-sm">
+                    {point}
+                  </li>
+                ))}
+            </ul>
           </div>
         </motion.div>
       </div>
