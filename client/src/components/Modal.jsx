@@ -33,7 +33,7 @@ export default function Modal({ navigation, handleNavItemClick }) {
             >
               <Popover.Panel
                 className="absolute 
-              -left-24 z-10 mt-3 w-screen max-w-sm -translate-x-1/2 transform px-4 px-0 lg:max-w-3xl
+              -left-24 z-10 mt-3 w-screen max-w-sm -translate-x-[11rem] transform px-4 px-0 lg:max-w-3xl
               "
               >
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
