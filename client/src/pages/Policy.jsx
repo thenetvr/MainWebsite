@@ -11,6 +11,10 @@ import {
   usageData,
   cookies,
   useOfPersonalData,
+  retentionOfPersonalData,
+  transferOfYourPersonalData,
+  deleteYourPersonalData,
+  legalRequirements,
 } from "../utils/Constants";
 
 export default function Policy() {
@@ -209,6 +213,158 @@ export default function Policy() {
                     {point}
                   </li>
                 ))}
+            </ul>
+          </div>
+
+          {/* Retention of Your Personal Data */}
+          <div className="py-7">
+            <h1 className={header}>Retention of Your Personal Data</h1>
+            {retentionOfPersonalData &&
+              retentionOfPersonalData.map((point, idx) => (
+                <p key={idx} className="text-sm">
+                  {point}
+                </p>
+              ))}
+          </div>
+
+          {/* Transfer of Your Personal Data */}
+          <div className="py-7">
+            <h1 className={header}>Transfer of Your Personal Data</h1>
+            {transferOfYourPersonalData &&
+              transferOfYourPersonalData.map((point, idx) => (
+                <p key={idx} className="text-sm pt-3">
+                  {point}
+                </p>
+              ))}
+          </div>
+
+          {/* Delete Your Personal Data */}
+          <div className="py-7">
+            <h1 className={header}>Delete Your Personal Data</h1>
+            {deleteYourPersonalData &&
+              deleteYourPersonalData.map((point, idx) => (
+                <p key={idx} className="text-sm pt-3">
+                  {point}
+                </p>
+              ))}
+          </div>
+
+          {/* Disclosure of Your Personal Data */}
+          <div className="py-7">
+            <h1 className={header}>Disclosure of Your Personal Data</h1>
+            {/* Business Transactions */}
+            <div>
+              <h1 className={header}>Business Transactions</h1>
+              <p className="text-sm pb-3">
+                If the Company is involved in a merger, acquisition or asset
+                sale, Your Personal Data may be transferred. We will provide
+                notice before Your Personal Data is transferred and becomes
+                subject to a different Privacy Policy.
+              </p>
+            </div>
+
+            {/* Law Enforcement */}
+            <div>
+              <h1 className={header}>Law Enforcement</h1>
+              <p className="text-sm pb-3">
+                Under certain circumstances, the Company may be required to
+                disclose Your Personal Data if required to do so by law or in
+                response to valid requests by public authorities (e.g. a court
+                or a government agency).
+              </p>
+            </div>
+
+            {/* Other Legal Requirements */}
+            <div>
+              <h1 className={header}>Other Legal Requirements</h1>
+              <p className="text-sm">
+                The Company may disclose Your Personal Data in the good faith
+                belief that such action is necessary to:
+              </p>
+              <ul className={listEl}>
+                {legalRequirements &&
+                  legalRequirements.map((point, idx) => (
+                    <li key={idx} className="text-sm">
+                      {point}
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* Security of Your Personal Data */}
+          <div className="py-7">
+            <h1 className={header}>Security of Your Personal Data</h1>
+            <p className="text-sm">
+              The security of Your Personal Data is important to Us, but
+              remember that no method of transmission over the Internet, or
+              method of electronic storage is 100% secure. While We strive to
+              use commercially acceptable means to protect Your Personal Data,
+              We cannot guarantee its absolute security.
+            </p>
+          </div>
+
+          {/* Children's Privacy */}
+          <div className="py-7">
+            <h1 className={header}>Children's Privacy</h1>
+            <p className="text-sm">
+              Our Service does not address anyone under the age of 13. We do not
+              knowingly collect personally identifiable information from anyone
+              under the age of 13. If You are a parent or guardian and You are
+              aware that Your child has provided Us with Personal Data, please
+              contact Us. If We become aware that We have collected Personal
+              Data from anyone under the age of 13 without verification of
+              parental consent, We take steps to remove that information from
+              Our servers.
+            </p>
+            <p className="text-sm">
+              If We need to rely on consent as a legal basis for processing Your
+              information and Your country requires consent from a parent, We
+              may require Your parent's consent before We collect and use that
+              information.
+            </p>
+          </div>
+
+          {/* Links to other websties */}
+          <div className="py-7">
+            <h1 className={header}>Links to Other Websties</h1>
+            <p className="text-sm">
+              Our Service may contain links to other websites that are not
+              operated by Us. If You click on a third party link, You will be
+              directed to that third party's site. We strongly advise You to
+              review the Privacy Policy of every site You visit. We have no
+              control over and assume no responsibility for the content, privacy
+              policies or practices of any third party sites or services.
+            </p>
+          </div>
+
+          {/* Changes to this Privacy Policy */}
+          <div className="py-7">
+            <h1 className={header}>Changes to this Privacy Policy</h1>
+            <p className="text-sm">
+              We may update Our Privacy Policy from time to time. We will notify
+              You of any changes by posting the new Privacy Policy on this page.
+              We will let You know via email and/or a prominent notice on Our
+              Service, prior to the change becoming effective and update the
+              "Last updated" date at the top of this Privacy Policy. You are
+              advised to review this Privacy Policy periodically for any
+              changes. Changes to this Privacy Policy are effective when they
+              are posted on this page.
+            </p>
+          </div>
+
+          {/* Contact Us */}
+          <div className="py-7">
+            <h1 className={header}>Contact Us</h1>
+            <p className="text-sm">
+              If you have any questions about this Privacy Policy, You can
+              contact us:
+            </p>
+            <ul className={listEl}>
+              <li className="text-sm">By email: info@thenetvr.com</li>
+              <li className="text-sm">
+                By visiting this page on our website: https://www.thenetvr.com
+              </li>
             </ul>
           </div>
         </motion.div>
