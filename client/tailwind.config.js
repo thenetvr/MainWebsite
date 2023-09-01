@@ -5,7 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'myFont': ["myFont", "sourcesanspro"]
+      },
+      colors: {
+        'custom-blue': 'rgba(72, 139, 193, 1)'
+      }
+    },
   },
   plugins: [],
 }
