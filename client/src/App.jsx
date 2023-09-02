@@ -6,6 +6,7 @@ import {
   Routes,
   useLocation,
 } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 // pages
 import InfluencerProgram from "./pages/InfluencerProgram";
@@ -15,7 +16,7 @@ import ContactUs from "./pages/ContactUs";
 import NetVRTheater from "./pages/NetVRTheater";
 import News from "./pages/News";
 import TheTeam from "./pages/TheTeam";
-import { AnimatePresence } from "framer-motion";
+import Policy from "./pages/Policy";
 
 function Routing() {
   const location = useLocation();
@@ -30,6 +31,7 @@ function Routing() {
         <Route path="/net-vr-theater" element={<NetVRTheater />} />
         <Route path="/news" element={<News />} />
         <Route path="/the-team" element={<TheTeam />} />
+        <Route path="/privacy-policy" element={<Policy />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </AnimatePresence>
