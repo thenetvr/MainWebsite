@@ -13,13 +13,14 @@ const contentCreators = {"Awra":["https://www.twitch.tv/awra_", creatorIcon.Awra
     "Steazey":["https://www.twitch.tv/steazey",creatorIcon.SteazeyIcon], "Catzawr":["https://www.twitch.tv/catzawr", creatorIcon.CatzawrIcon],
     "JonsyGG":["https://www.twitch.tv/jonsygg", creatorIcon.JonsyGGIcon],"RaiderRCLive":["https://www.twitch.tv/raiderrclive", creatorIcon.RaiderRCLiveIcon]}
 
+import {useEffect} from "react";
 const displayCreators = () => {
     const creators = [];
     for (let username in contentCreators) {
         creators.push(
-            <div className={"w-1/5 underline"}>
+            <div className={"underline text-center"}>
                 <a href={contentCreators[username][0]}>
-                    <img className={"h-4/6 "} src={contentCreators[username][1]} alt="creator image"/>
+                    <img className={""} src={contentCreators[username][1]} alt="creator image"/>
                     {username}</a>
             </div>
         )
@@ -29,16 +30,16 @@ const displayCreators = () => {
 export default function Creators() {
         return (
             <div className="bg-slate-800 h-max">
-                <div className="flex flex-col items-center h-screen bg-black">
+                <div className="flex flex-col items-center h-fit h-screen lg:px-60 p-10">
                     <motion.div
                         variants={pageVariants}
                         initial="hidden"
                         animate="visible"
                         exit="exit"
                     >
-                    <div className={"flex w-2/3 justify-left mx-auto mb-40"}>
+                    <div className={"flex w-2/3 justify-center mx-auto mb-40"}>
                         <div>
-                            <img className={"w-4.5/7 px-28"} src={NetVRTheater} alt="image"/>
+                            <img className={""} src={NetVRTheater} alt="image"/>
                         </div>
                         <div>
                             <h1 className={"text-4xl text-custom-blue mb-16"}>Content Creators</h1>
