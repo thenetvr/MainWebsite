@@ -30,7 +30,7 @@ const displayCreators = () => {
 export default function Creators() {
         return (
             <div className="bg-slate-800 h-max">
-                <div className="flex flex-col items-center h-fit h-screen lg:px-60 p-10">
+                <div className="flex flex-col items-center h-fit lg:px-60 p-10">
                     <motion.div
                         variants={pageVariants}
                         initial="hidden"
