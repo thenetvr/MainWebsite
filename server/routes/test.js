@@ -1,12 +1,19 @@
 const express = require('express');
 const router = express.Router()
 
+// import path & handlebars for email templating
+const fs = require('fs')
+const handlebars = require("handlebars")
+
 // import nodemailer and create transport setup
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
-  service: "hotmail",
+  // can use gmail service
+  host: "smtp.gmail.email",
+  secure: false,
+  service: 'gmail',
   auth: {
-    user: "instagram-clone-name@outlook.com",
+    user: "noahfajarda1@gmail.com",
     pass: process.env.EMAIL_PASS
   }
 })
@@ -22,20 +29,26 @@ router.get("/", async (req, res) => {
 
 router.post("/testing", async (req, res) => {
   try {
+    // HTML email template used
+    const source = fs.readFileSync('./templates/email_template.html', 'utf-8')
+      .toString();
+    const template = handlebars.compile(source);
+
+    // specify variables for email template
+    const htmlToSend = template({
+      username: 'Jason'
+    })
+
     // NOTE: this might end up in spam
     // send the email
-    transporter.sendMail({
+    await transporter.sendMail({
       // must match same email as transporter
-      from: "instagram-clone-name@outlook.com",
+      from: "noahfajarda1@gmail.com",
       to: req.body.email,
       subject: "This is Net VR!",
-      html: `<h1>Welcome To Net VR sir!</h1>
-      <br/>
-      <br/>
-      <p>We hope you enjoy using our platform!</p>
-      <br/>
-      <p>Sincerely, Net VR Team</p>
-      `, // html body
+      text: "This is Net VR!",
+      // send the template
+      html: htmlToSend
     })
 
     res.json({ message: "Saved Successfully. Check inbox or spam in your email!" })
