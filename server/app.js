@@ -13,6 +13,8 @@ app.use(morgan("dev"));
 app.use(cors({ origin: true, credentials: true }));
 
 // middleware
+app.use(express.json());
+app.use(express.urlencoded());
 
 // routes
 app.use(require("./routes"))
