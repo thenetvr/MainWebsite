@@ -1,5 +1,5 @@
 export default function sendEmail(email) {
-  console.log(email)
+  console.log("testinggg email")
   fetch("/testing", {
     method: "POST",
     headers: {
