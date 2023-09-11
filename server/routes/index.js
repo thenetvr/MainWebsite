@@ -2,7 +2,9 @@
 const router = require("express").Router();
 
 const testRoutes = require("./test");
+const contactUsMailRoutes = require("./contactUsMail");
 
 router.use(testRoutes);
+router.use(contactUsMailRoutes);
 
 module.exports = router;
