@@ -13,40 +13,44 @@ const transporter = nodemailer.createTransport({
   secure: false,
   service: 'gmail',
   auth: {
-    user: "mxie360@gmail.com",
-    pass: process.env.EMAIL_PASS
+    user: "mike@thenetvr.com",
+    pass: process.env.MIKE_EMAIL_PASS
   }
 })
 
-router.get("/", async (req, res) => {
+router.get("/contactUsMail", async (req, res) => {
   try {
-    res.json({ "hello": "worlds" });
+    res.json({ "contactUsMail": "contactUsMail" });
   } catch (err) {
     res.status(500).send(err)
     console.error(err)
   }
 })
 
-router.post("/testing", async (req, res) => {
+router.post("/contactUsMail", async (req, res) => {
   try {
     // HTML email template used
-    const source = fs.readFileSync('.\\templates\\email_template.html', 'utf-8')
+    const source = fs.readFileSync('.\\templates\\email_contact_us_template.html', 'utf-8')
       .toString();
     const template = handlebars.compile(source);
 
     // specify variables for email template
     const htmlToSend = template({
-      username: 'Mike'
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      phoneNumber: req.body.phoneNumber,
+      message: req.body.message
     })
 
     // NOTE: this might end up in spam
     // send the email
     await transporter.sendMail({
       // must match same email as transporter
-      from: "mxie360@gmail.com",
-      to: req.body.email,
-      subject: "This is Net VR!",
-      text: "This is Net VR!",
+      from: "mike@thenetvr.com",
+      to: "mike@thenetvr.com, mxie360@gmail.com",
+      subject: "New user wishes to contact us!",
+      text: "New user wishes to contact us!",
       // send the template
       html: htmlToSend
     })
