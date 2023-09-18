@@ -1,4 +1,5 @@
 import { useReducer } from "react";
+import axios from "axios";
 
 export default function InfluencerForm() {
   const fieldText = "w-64 text-xl bg-slate-50 text-black p-1 rounded";
@@ -31,6 +32,16 @@ export default function InfluencerForm() {
         return;
       }
     }
+    axios.post("http://localhost:8080/influencerProgramMail", {
+      firstName: state.firstName,
+      lastName: state.lastName,
+      emailAddress: state.emailAddress,
+      platformUsername: state.platformUsername,
+      primaryCategoryOfContent: state.primaryCategoryOfContent,
+      totalFollowers: state.totalFollowers,
+      streamingChannel: state.streamingChannel,
+      twitter: state.twitter,
+    })
     console.log(state);
   };
 

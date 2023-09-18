@@ -49,7 +49,7 @@ export default function Home() {
 
         <div className="flex items-center justify-end">
           <img src={HomeTheaterEmpty} width={584} height={450} alt="Home Theater" className="mt-12 mr-40" />
-          <div className="z-10 mt-[-150px]">
+          <div className="z-10">
             <div className="flex flex-col">
               <p className="mb-16 self-start text-custom-blue text-4xl font-semibold">
                 Welcome To The Net VR
@@ -65,7 +65,7 @@ export default function Home() {
         </div>
 
         <div className="flex items-center justify-end">
-          <div className="z-10 mt-[-70px]">
+          <div className="z-10">
             <div className="flex flex-col">
               <p className="mb-16 self-start text-custom-blue text-4xl font-semibold">
                 Immersive 3D Environments
