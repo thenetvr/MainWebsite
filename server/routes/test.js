@@ -20,7 +20,8 @@ const transporter = nodemailer.createTransport({
 
 router.get("/", async (req, res) => {
   try {
-    res.json({ "hello": "worlds" });
+    res.json({ 
+      "hello": "worlds"});
   } catch (err) {
     res.status(500).send(err)
     console.error(err)

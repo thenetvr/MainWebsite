@@ -35,7 +35,7 @@ export default function ContactUs() {
     }
   }
   return (
-    <div className="bg-black h-max">
+    <div className="bg-slate-800 h-max">
       <div className="flex flex-col items-center h-screen">
         <div>
           <motion.div
@@ -52,12 +52,12 @@ export default function ContactUs() {
               <div className={"flex h-20"}>
                 <div className={" h-12 w-[220px] mr-10"}>
                   <label className={" text-[24px] block"}> First Name </label>
-                  <input className={"text-black w-[220px]"} type={"text"} name={"fname"} onChange={(e) => setFirstName(e.target.value)}/>
+                  <input className={"text-white w-[220px]"} type={"text"} name={"fname"} onChange={(e) => setFirstName(e.target.value)}/>
                 </div>
                 <div>
                   <div className={"h-12 w-80"}>
                     <label className={"text-[24px] block"}> Last Name </label>
-                    <input className={"text-black w-[220px]"} type={"text"} name={"lname"} onChange={(e) => setLastName(e.target.value)}/>
+                    <input className={"text-white w-[220px]"} type={"text"} name={"lname"} onChange={(e) => setLastName(e.target.value)}/>
                   </div>
                 </div>
               </div>
@@ -65,17 +65,17 @@ export default function ContactUs() {
               <div className={"flex h-20 w-4/5"}>
                 <div className={" h-14 w-[220px] mr-10"}>
                   <label className={"text-[25px] block"}> Email Address</label>
-                  <input className={"text-black w-[220px]"} type={"text"} name={"email"} onChange={(e) => setEmail(e.target.value)}/>
+                  <input className={"text-white w-[220px]"} type={"text"} name={"email"} onChange={(e) => setEmail(e.target.value)}/>
                 </div>
                 <div className={" h-14 w-80"}>
                   <label className={"text-[24px] block"}> Phone Number</label>
-                  <input className={"text-black w-[220px]"} type={"text"} name={"phoneNumber"} onChange={(e) => setPhoneNumber(e.target.value)}/>
+                  <input className={"text-white w-[220px]"} type={"text"} name={"phoneNumber"} onChange={(e) => setPhoneNumber(e.target.value)}/>
                 </div>
               </div>
 
               <div>
                 <label className={"text-[24px] block"}>Send a message</label>
-                <input className={"text-black w-full"} type={"text"} name={"userMessage"} onChange={(e) => setMessage(e.target.value)}/>
+                <textarea rows={8} className={"text-white w-full"} type={"text"} name={"userMessage"} onChange={(e) => setMessage(e.target.value)}/>
               </div>
               <button className={"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 " +
                   "float-right mt-5"} type={"submit"} onClick={() => sendMail()}>

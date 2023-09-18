@@ -10,11 +10,12 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   // can use gmail service
   host: "smtp.gmail.email",
+  port: 465,
   secure: false,
   service: 'gmail',
   auth: {
     user: "noreply@thenetvr.com",
-    pass: process.env.MIKE_EMAIL_PASS
+    pass: process.env.NOREPLY_EMAIL_PASS
   }
 })
 
@@ -48,7 +49,7 @@ router.post("/contactUsMail", async (req, res) => {
     await transporter.sendMail({
       // must match same email as transporter
       from: "noreply@thenetvr.com",
-      to: req.body.email,
+      to: "mike@thenetvr.com",
       subject: "New user wishes to contact us!",
       text: "New user wishes to contact us!",
       // send the template
