@@ -10,34 +10,38 @@ const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
   // can use gmail service
   host: "smtp.gmail.email",
+  port: 465,
   secure: false,
   service: 'gmail',
   auth: {
     user: "noreply@thenetvr.com",
-    pass: process.env.EMAIL_PASS
+    pass: process.env.NOREPLY_EMAIL_PASS
   }
 })
 
-router.get("/", async (req, res) => {
+router.get("/contactUsMail", async (req, res) => {
   try {
-    res.json({ 
-      "hello": "worlds"});
+    res.json({ "contactUsMail": "contactUsMail" });
   } catch (err) {
     res.status(500).send(err)
     console.error(err)
   }
 })
 
-router.post("/testing", async (req, res) => {
+router.post("/contactUsMail", async (req, res) => {
   try {
     // HTML email template used
-    const source = fs.readFileSync('.\\templates\\email_template.html', 'utf-8')
+    const source = fs.readFileSync('.\\templates\\email_contact_us_template.html', 'utf-8')
       .toString();
     const template = handlebars.compile(source);
 
     // specify variables for email template
     const htmlToSend = template({
-      username: 'Mike'
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      phoneNumber: req.body.phoneNumber,
+      message: req.body.message
     })
 
     // NOTE: this might end up in spam
@@ -45,9 +49,9 @@ router.post("/testing", async (req, res) => {
     await transporter.sendMail({
       // must match same email as transporter
       from: "noreply@thenetvr.com",
-      to: req.body.email,
-      subject: "This is Net VR!",
-      text: "This is Net VR!",
+      to: "mike@thenetvr.com",
+      subject: "New user wishes to contact us!",
+      text: "New user wishes to contact us!",
       // send the template
       html: htmlToSend
     })

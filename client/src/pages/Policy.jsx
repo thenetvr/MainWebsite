@@ -30,7 +30,7 @@ export default function Policy() {
           animate="visible"
           exit="exit"
         >
-          {/* prvacy policy */}
+          {/* privacy policy */}
           <div className="py-7">
             <h1 className={header}>Privacy Policy</h1>
             <p className="text-sm">Last updated: December 14, 2022</p>
