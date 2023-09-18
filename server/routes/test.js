@@ -13,7 +13,7 @@ const transporter = nodemailer.createTransport({
   secure: false,
   service: 'gmail',
   auth: {
-    user: "mxie360@gmail.com",
+    user: "noreply@thenetvr.com",
     pass: process.env.EMAIL_PASS
   }
 })
@@ -44,7 +44,7 @@ router.post("/testing", async (req, res) => {
     // send the email
     await transporter.sendMail({
       // must match same email as transporter
-      from: "mxie360@gmail.com",
+      from: "noreply@thenetvr.com",
       to: req.body.email,
       subject: "This is Net VR!",
       text: "This is Net VR!",

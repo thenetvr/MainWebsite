@@ -1,3 +1,4 @@
+// policy page
 export const definitions = [
   `Account means a unique account created for You to access our Service or parts of our Service.`,
   `Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to The Net VR Inc.`,
@@ -128,4 +129,29 @@ export const legalRequirements = [
   "Prevent or investigate possible wrongdoing in connection with the Service",
   "Protect the personal safety of Users of the Service or the public",
   "Protect against legal liability"
+]
+
+// influencer program
+import netVRstream from "../assets/influencerProgram/netVRstream.png";
+import twitch from "../assets/influencerProgram/twitch.png";
+import youtube from "../assets/influencerProgram/youtube.png";
+import facebook from "../assets/influencerProgram/facebook.png";
+
+export const platforms = [
+  {
+    description: "Host with the NetvrStream.com",
+    image: netVRstream
+  },
+  {
+    description: "Host with Twitch",
+    image: twitch
+  },
+  {
+    description: "In development",
+    image: youtube
+  },
+  {
+    description: "To be developed",
+    image: facebook
+  },
 ]
