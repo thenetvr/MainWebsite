@@ -13,7 +13,8 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/testing': routeConfig
+      '/testing': routeConfig,
+      '/contactUsMail': routeConfig,
     }
   }
 })
