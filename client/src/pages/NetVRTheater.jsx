@@ -36,14 +36,14 @@ export default function NetVRTheater() {
                     className="flex flex-row flex-wrap items-start justify-center items-center pl-5 space-y-3 text-slate-400 text-2xl"
                     style={{ listStyleType: "circle" }}
                   >
-                    <li className="w-3/6">Direct Stream</li>
-                    <li className="w-3/6">Twitch Add-On</li>
-                    <li className="w-3/6">Voting Podium</li>
-                    <li className="w-3/6">Voice Chat</li>
-                    <li className="w-3/6">Donation Podium</li>
-                    <li className="w-3/6">Chat Wall</li>
-                    <li className="w-3/6">Customized Avatar</li>
-                    <li className="w-3/6">Admin Panel</li>
+                    <li className="w-6/12 pr-6">Direct Stream</li>
+                    <li className="w-6/12 pr-6">Twitch Add-On</li>
+                    <li className="w-6/12 pr-6">Voting Podium</li>
+                    <li className="w-6/12 pr-6">Voice Chat</li>
+                    <li className="w-6/12 pr-6">Donation Podium</li>
+                    <li className="w-6/12 pr-6">Chat Wall</li>
+                    <li className="w-6/12 pr-6">Customized Avatar</li>
+                    <li className="w-6/12 pr-6">Admin Panel</li>
                   </ul>
                 </div>
               </div>
