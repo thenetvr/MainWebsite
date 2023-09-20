@@ -10,6 +10,8 @@ import demo2 from "../assets/NetVRTheater/demo2.png";
 import demo3 from "../assets/NetVRTheater/demo3.png";
 import shop from "../assets/NetVRTheater/shop.png";
 import viewers from "../assets/NetVRTheater/viewers.png";
+import GDCWinner from "../assets/NetVRTheater/GDCWinner.png";
+import contentCreators from "../assets/NetVRTheater/contentCreators.png";
 
 export default function NetVRTheater() {
   return (
@@ -118,7 +120,11 @@ export default function NetVRTheater() {
                   <h1 className="font-bold text-2xl text-sky-500">
                     Content Creators
                   </h1>
-                  <img className="py-9" src={viewers} alt="host Theater" />
+                  <img
+                    className="py-9"
+                    src={contentCreators}
+                    alt="host Theater"
+                  />
                   <div className="p-3">
                     <ul
                       role="list"
@@ -249,6 +255,62 @@ export default function NetVRTheater() {
                       </li>
                     </ul>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* System Requirements */}
+            <div className="py-3">
+              <div className="text-sky-500 text-3xl font-bold">
+                System Requirements
+              </div>
+              <div className="p-3">
+                <div className="text-sky-500 text-2xl">Windows 10</div>
+                <ul
+                  role="list"
+                  className="flex flex-row flex-wrap items-start justify-center items-center pl-5 py-4 space-y-3 text-slate-400 text-2xl"
+                  style={{ listStyleType: "circle" }}
+                >
+                  <li className="w-full">
+                    Processor: Intel Core 2 Duo 2.5 GHz (Or Greater)
+                  </li>
+                  <li className="w-full">DirectX: Version 11</li>
+                  <li className="w-full">Storage: 2 GB Available Space</li>
+                  <li className="w-full">Memory: 1 GB RAM</li>
+                  <li className="w-full">
+                    Graphics: NVIDIA 9xxx / ATI 2xxx (Or Greater
+                  </li>
+                  <li className="w-full">Sound Card: DirectX9 Compatible</li>
+                </ul>
+              </div>
+              <div className="p-3">
+                <div className="text-sky-500 text-2xl">MacOS 10</div>
+                <ul
+                  role="list"
+                  className="flex flex-row flex-wrap items-start justify-center items-center pl-5 py-4 space-y-3 text-slate-400 text-2xl"
+                  style={{ listStyleType: "circle" }}
+                >
+                  <li className="w-full">
+                    Processor: 1.6 GHz Core I5 (I5-8210Y (Or Greater)
+                  </li>
+                  <li className="w-full">Memory: 8 MB</li>
+                  <li className="w-full">Storage: 2GB Available Space</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex justify-center align-center">
+              <img
+                className="py-9 pr-3"
+                src={GDCWinner}
+                width="60"
+                alt="host Theater"
+              />
+              <div className="flex items-center pr-3">
+                <div>
+                  *Our application is free and features are unlocked with time,
+                  however if you do not want to wait the designated time, you
+                  can purchase features. DOWNLOAD
                 </div>
               </div>
             </div>
