@@ -1,12 +1,12 @@
 // framer motion
 import { motion } from "framer-motion";
 import { pageVariants } from "../utils/framerMotionVariants";
-import Platforms from "../components/shared/Platforms";
 // images
 import View from "../assets/NetVRTheater/View.png";
 import GDCWinner from "../assets/NetVRTheater/GDCWinner.png";
 // components
 import Footer from "../components/Footer";
+import Platforms from "../components/shared/Platforms";
 import SystemRequirements from "../components/NetVRTheater/SystemRequirements";
 import Demos from "../components/NetVRTheater/Demos";
 import FeaturesOfVirtualTheater from "../components/NetVRTheater/FeaturesOfVirtualTheater";
