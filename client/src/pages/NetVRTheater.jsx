@@ -4,28 +4,17 @@ import { pageVariants } from "../utils/framerMotionVariants";
 import Platforms from "../components/shared/Platforms";
 // images
 import View from "../assets/NetVRTheater/View.png";
-
 import GDCWinner from "../assets/NetVRTheater/GDCWinner.png";
-// constants
-import { netVRTheaterPoints } from "../utils/Constants";
 // components
 import Footer from "../components/Footer";
-import ListValues from "../components/NetVRTheater/listValues";
 import SystemRequirements from "../components/NetVRTheater/SystemRequirements";
 import Demos from "../components/NetVRTheater/Demos";
 import FeaturesOfVirtualTheater from "../components/NetVRTheater/FeaturesOfVirtualTheater";
 import AvailableFeatures from "../components/NetVRTheater/AvailableFeatures";
+import InShopPurchase from "../components/NetVRTheater/InShopPurchase";
+import ComDefChatCom from "../components/NetVRTheater/ComDefChatCom";
 
 export default function NetVRTheater() {
-  const {
-    features,
-
-    inShopPurchase,
-    inShopPurchase2,
-    commandDefinitions,
-    chatCommand,
-  } = netVRTheaterPoints;
-
   const listStyling =
     "flex flex-row flex-wrap items-start justify-center items-center pl-5 space-y-3 text-slate-400 text-2xl";
 
@@ -40,12 +29,9 @@ export default function NetVRTheater() {
         >
           <div className="p-8 d-flex">
             <div className="text-sky-500 text-6xl mb-8">THE NET VR THEATER</div>
-            {/* features */}
-            <FeaturesOfVirtualTheater
-              listStyling={listStyling}
-              features={features}
-            />
 
+            {/* features */}
+            <FeaturesOfVirtualTheater listStyling={listStyling} />
             <div className="flex justify-center">
               <img className="py-3" src={View} alt="host Theater" />
             </div>
@@ -62,89 +48,20 @@ export default function NetVRTheater() {
             {/* Available Features */}
             <div className="py-3">
               <div className="text-sky-500 text-3xl">Available Features</div>
-              <AvailableFeatures />
+              <AvailableFeatures listStyling={listStyling} />
               <div className="flex justify-end">
                 <div className="text-1xl">*Features coming soon!</div>
               </div>
             </div>
 
             {/* In-Shop Purchase */}
-            <div className="py-3">
-              <div className="text-sky-500 text-3xl">In-Shop Purchase</div>
-              <div className="flex py-8">
-                {[
-                  { val: inShopPurchase, mar: "mr-2", pad: 5 },
-                  { val: inShopPurchase2, mar: "ml-2", pad: 3 },
-                ].map((obj, idx) => (
-                  <div
-                    className={`w-3/6 border-2 border-sky-500 ${obj.mar} p-4`}
-                    key={idx}
-                  >
-                    <div className="p-3">
-                      <ul
-                        role="list"
-                        className={listStyling}
-                        style={{ listStyleType: "circle" }}
-                      >
-                        {obj.val.map((point, idx) => (
-                          <ListValues
-                            key={idx}
-                            point={point}
-                            paddingYSize={obj.pad}
-                          />
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            <InShopPurchase listStyling={listStyling} />
 
             {/* Command Definitions & Chat Command */}
-            <div className="py-3">
-              <div className="flex">
-                <div className="text-sky-500 text-3xl w-1/2">
-                  Command Definitions
-                </div>
-                <div className="text-sky-500 text-3xl w-1/2 pl-2">
-                  Chat Command
-                </div>
-              </div>
-              <div className="flex py-8">
-                <div className="w-3/6 border-2 border-sky-500 mr-2 p-4">
-                  <div className="p-3">
-                    <ul
-                      role="list"
-                      className={listStyling}
-                      style={{ listStyleType: "circle" }}
-                    >
-                      {commandDefinitions.map((point, idx) => (
-                        <ListValues key={idx} point={point} paddingYSize={3} />
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-                <div className="w-3/6 border-2 border-sky-500 ml-2 p-4">
-                  <div className="p-3">
-                    <ul
-                      role="list"
-                      className={listStyling}
-                      style={{ listStyleType: "circle" }}
-                    >
-                      {chatCommand.map((point, idx) => (
-                        <li className="w-full py-3" key={idx}>
-                          {point}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <ComDefChatCom listStyling={listStyling} />
 
             {/* System Requirements */}
             <SystemRequirements />
-
             <div className="flex justify-center align-center">
               <img
                 className="py-9 pr-3"

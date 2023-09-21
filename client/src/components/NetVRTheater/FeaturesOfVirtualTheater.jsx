@@ -1,5 +1,8 @@
+// constants
+import { netVRTheaterPoints } from "../../utils/Constants";
 // eslint-disable-next-line react/prop-types
-export default function FeaturesOfVirtualTheater({ listStyling, features }) {
+export default function FeaturesOfVirtualTheater({ listStyling }) {
+  const { features } = netVRTheaterPoints;
   return (
     <div className="grid grid-cols-3 gap-4 mb-10">
       <div className="text-sky-500 text-3xl">Features Of Virtual Theater</div>
