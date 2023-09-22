@@ -13,6 +13,7 @@ import FeaturesOfVirtualTheater from "../components/NetVRTheater/FeaturesOfVirtu
 import AvailableFeatures from "../components/NetVRTheater/AvailableFeatures";
 import InShopPurchase from "../components/NetVRTheater/InShopPurchase";
 import ComDefChatCom from "../components/NetVRTheater/ComDefChatCom";
+import VideoContainer from "../components/NetVRTheater/VideoContainer";
 
 export default function NetVRTheater() {
   const listStyling =
@@ -29,22 +30,17 @@ export default function NetVRTheater() {
         >
           <div className="p-8 d-flex">
             <div className="text-sky-500 text-6xl mb-8">THE NET VR THEATER</div>
-
             {/* features */}
             <FeaturesOfVirtualTheater listStyling={listStyling} />
-            <div className="flex justify-center">
-              <img className="py-3" src={View} alt="host Theater" />
-            </div>
-
+            {/* video container */}
+            <VideoContainer />
             {/* demo images */}
             <Demos />
-
             {/* host streams / platforms */}
             <div className="py-8">
               <div className="text-sky-500 text-3xl italic">Multi-Platform</div>
               <Platforms padding="10" />
             </div>
-
             {/* Available Features */}
             <div className="py-3">
               <div className="text-sky-500 text-3xl">Available Features</div>
@@ -53,13 +49,10 @@ export default function NetVRTheater() {
                 <div className="text-1xl">*Features coming soon!</div>
               </div>
             </div>
-
             {/* In-Shop Purchase */}
             <InShopPurchase listStyling={listStyling} />
-
             {/* Command Definitions & Chat Command */}
             <ComDefChatCom listStyling={listStyling} />
-
             {/* System Requirements */}
             <SystemRequirements />
             <div className="flex justify-center align-center">
