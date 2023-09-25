@@ -155,3 +155,76 @@ export const platforms = [
     image: facebook
   },
 ]
+
+export const netVRTheaterPoints = {
+  features: [
+    "Direct Stream",
+    "Twitch Add-On",
+    "Voting Podium",
+    "Voice Chat",
+    "Donation Podium",
+    "Chat Wall",
+    "Customized Avatar",
+    "Admin Panel"
+  ],
+  userViewers: [
+    "Voice Chat",
+    "Integrated Chat Wall",
+    "Customizable Avatar",
+    "Voting Podium",
+    "Award Podium",
+    "Seating",
+    "Emotes"
+  ],
+  contentCreatorsFeatures: [
+    "Host Your Own Stream",
+    "Host Your Favorite Creator, But Be Sure to Get Their Permission",
+    ["Admins", "- Highlight", "- Kick", "- Silence", "- Doorway to Other Theater"],
+    "Choose Your Own Theater Skin",
+    "Upload Your Logo*",
+    "Create Your Own Digital Assets"
+  ],
+  inShopPurchase: [
+    ["Immediate Unlock*", "- Text Chat", "- Voice Chat", "- Avatar"],
+    "Lux",
+    "Lux Ray",
+    "Avatar Skin",
+    "Awards"
+  ],
+  inShopPurchase2: [
+    ["Immediate Unlock", "- Host"],
+    "Extra Seats",
+    "Theater Skins",
+    "In-theater Items",
+    "Award Podium",
+    "Seating",
+    "Emotes"
+  ],
+  commandDefinitions: [
+    "General Theater Information",
+    "Alerts When Users Enter/Leave, Vote, Award",
+    "Highlights User",
+    "Removes User",
+    "Mutes User (Voice Chat)"
+  ],
+  chatCommand: [
+    "!Theater Info",
+    "!Theater alerts (on/off)",
+    "!Theater highlight (username)",
+    "!Theater kick (username)",
+    "!Theater silence (username)"
+  ],
+  windows10: [
+    "Processor: Intel Core 2 Duo 2.5 GHz (Or Greater)",
+    "DirectX: Version 11",
+    "Storage: 2 GB Available Space",
+    "Memory: 1 GB RAM",
+    "Graphics: NVIDIA 9xxx / ATI 2xxx (Or Greater)",
+    "Sound Card: DirectX9 Compatible"
+  ],
+  macOS10: [
+    "Processor: 1.6 GHz Core I5 (I5-8210Y (Or Greater)",
+    "Memory: 8 MB",
+    "Storage: 2GB Available Space"
+  ]
+}

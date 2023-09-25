@@ -29,10 +29,16 @@ router.get("/influencerProgramMail", async (req, res) => {
 })
 
 router.post("/influencerProgramMail", async (req, res) => {
+  source = ""
   try {
-    // HTML email template used
-    const source = fs.readFileSync('.\\templates\\email_influencer_program_template.html', 'utf-8')
-      .toString();
+    if (process.platform === "darwin") { // darwin == mac os
+      // HTML email template used
+      source = fs.readFileSync('./templates/email_influencer_program_template.html', 'utf-8')
+        .toString();
+    } else if (process.platform === "win32") { // windows == win32
+      source = fs.readFileSync('.\\templates\\email_influencer_program_template.html', 'utf-8')
+        .toString();
+    }
     const template = handlebars.compile(source);
 
     // specify variables for email template
