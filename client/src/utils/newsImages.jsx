@@ -9,6 +9,8 @@ import GDC_Winner from "../assets/GDC_Winner.png"
 import Top_Steam from "../assets/Top_Steam_Games.png"
 import Launch_Day from "../assets/Launch_On_Steam.png"
 import Metaverse_Info from "../assets/Metaverse_Ecosystem.png"
+import Disrupt_Magazine from "../assets/Disrupt_Magazine.png"
+
 
 export default {
   "img1": Free_App,
@@ -21,5 +23,7 @@ export default {
   "img8": GDC_Winner,
   "img9": Top_Steam,
   "img10": Launch_Day,
-  "img11": Metaverse_Info
+  "img11": Metaverse_Info,
+  "img12": Disrupt_Magazine
+
 }

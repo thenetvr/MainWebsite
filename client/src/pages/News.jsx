@@ -10,6 +10,12 @@ import newsImages from "../utils/newsImages.jsx";
 
 
 const newsInfo = {
+  "DKyle Doran and The Net VR Creates a Unique and Innovative Experience for Livestreamers and Viewers":[
+    "https://disruptmagazine.com/kyle-doran-and-the-net-vr-creates-a-unique-and-innovative-experience-for-livestreamers-and-viewers/",
+    newsImages.img12,
+    "May 16, 2022",
+    "Disrupt Magazine (Tech + Startups)"],
+
   "The Net VR Theater Game Review":[
     "https://freeappsforme.com/net-vr-theater-review/",
     newsImages.img1,
@@ -90,7 +96,7 @@ const displayNews = () => {
   };
 
   for (let news in newsInfo) {
-    if (count < 9) {
+    if (count < 12) {
       currentRow.push(
         <div style={{maxWidth: '300px', wordWrap: 'break-word', marginLeft: "40px"}} key={news}>
           <div className="flex flex-col items-start">
@@ -116,9 +122,9 @@ const displayNews = () => {
         );
         currentRow = [];
       }
-    } else if (count === 9) {
+    } else if (count === 12) {
       newsEvents.push(
-        <div style={{maxWidth: '300px', wordWrap: 'break-word', marginRight: "180px", marginLeft: "-140px"}} key={news}>
+        <div style={{maxWidth: '300px', wordWrap: 'break-word', marginLeft: "40px"}} key={news}>
           <div className="flex flex-col items-start">
             <img className="mt-10" src={newsInfo[news][1]} alt="news image" style={imageSize}/>
             <p className="mt-2">{newsInfo[news][3]}</p>
