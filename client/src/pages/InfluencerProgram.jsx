@@ -2,12 +2,11 @@ import Footer from "../components/Footer";
 // framer motion
 import { motion } from "framer-motion";
 import { pageVariants } from "../utils/framerMotionVariants";
-// utils
-import { platforms } from "../utils/Constants";
 // extra images
 import hostTheater from "../assets/influencerProgram/hostTheater.png";
 import streamExample from "../assets/influencerProgram/netVRstreamExample.png";
 import InfluencerForm from "../components/InfluencerProgram/InfluencerForm";
+import Platforms from "../components/shared/Platforms";
 
 export default function InfluencerProgram() {
   return (
@@ -31,24 +30,12 @@ export default function InfluencerProgram() {
             </div>
             <div className="text-sky-500 mb-3">(VR headset NOT required!)</div>
 
-            {/* host streams */}
-            <div className="py-32">
-              <div className="flex justify-around">
-                {platforms.map((platform, idx) => (
-                  <div key={idx} className="p-4">
-                    <div className="lg:h-400 lg:p-100 h-240">
-                      <img src={platform.image} alt={platform.description} />
-                    </div>
-                    <div className="text-center">{platform.description}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* host streams / platforms */}
+            <Platforms padding="32" />
 
             {/* images */}
             <img className="py-3" src={hostTheater} alt="host Theater" />
             <img className="py-3" src={streamExample} alt="host Theater" />
-
             <div className="py-3">
               <div className="text-sky-500 text-3xl italic">
                 Influencer Program
