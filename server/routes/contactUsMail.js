@@ -32,14 +32,15 @@ router.post("/contactUsMail", async (req, res) => {
   source = ""
   try {
     // HTML email template used
-    if (process.platform === "darwin") { // darwin == mac os
-      // HTML email template used
-      source = fs.readFileSync('./templates/email_contact_us_template.html', 'utf-8')
-        .toString();
-    } else if (process.platform === "win32") { // windows == win32
+    if (process.platform === "win32") { // windows == win32
       source = fs.readFileSync('.\\templates\\email_contact_us_template.html', 'utf-8')
         .toString();
     }
+    else { // darwin == mac os
+      // HTML email template used
+      source = fs.readFileSync('./templates/email_contact_us_template.html', 'utf-8')
+        .toString();
+    } 
     const template = handlebars.compile(source);
 
     // specify variables for email template
