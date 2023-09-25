@@ -2,11 +2,16 @@ import Footer from "../components/Footer";
 // framer motion
 import { motion } from "framer-motion";
 import { pageVariants } from "../utils/framerMotionVariants";
-import KyleImage from "../assets/KyleImage.png"
+import KyleImage from "../assets/ProfilePictures/KyleImage.png"
 import BruinImage from "../assets/BruinImage.png"
 import SusanImage from "../assets/SusanImage.png"
-import DavidImage from "../assets/DavidImage.png"
-import MikeImage  from "../assets/MikeXieImage.png"
+import DavidImage from "../assets/ProfilePictures/DavidImage.png"
+import MikeImage  from "../assets/ProfilePictures/MikeXieImage.Jpeg"
+import AbdulImage from "../assets/ProfilePictures/AbdulHannanImage.png"
+import AlanImage from "../assets/ProfilePictures/AlanTuckerImage.jpg"
+import NoahImage from "../assets/ProfilePictures/NoahFajardaImage.png"
+import SarahImage from "../assets/ProfilePictures/SarahKugelmasImage.jpg"
+import YupengImage from "../assets/ProfilePictures/YupengImage.jpeg"
 import NoProfile from "../assets/NoProfilePic.png"
 import LinkedinIcon from "../assets/linkedin.png"
 import TwitterIcon from "../assets/twitter.png"
@@ -17,13 +22,15 @@ import TIkTokIcon from "../assets/tik-tok.png"
 export default function TheTeam() {
   return (
     <div className="bg-slate-800 h-max">
-      <div className="flex flex-col items-center h-screen">
+      <div className="flex flex-col items-center">
         <motion.div
+          className="flex flex-col items-center flex-grow"
           variants={pageVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
         >
+        <div className="mx-auto">
         <h1 className={"text-2xl text-custom-blue"}>THE NET VR TEAM</h1>
             <div className={"flex mt-[10px]"}>
               <div className={"text-xl text-custom-blue"}>About Us</div>
@@ -46,7 +53,7 @@ export default function TheTeam() {
                         Such Of A Growing Gaming Company.</p>
                 </div>
             </div>
-            <div className={"flex mt-4"}>
+            {/* <div className={"flex mt-4"}>
                 <div>
                     <h2 className={"text-2xl uppercase"}>Bruin Peyton</h2>
                     <p className={"text-lg"}>Chief Technology Officer (CTO)</p>
@@ -74,6 +81,7 @@ export default function TheTeam() {
                         The Age Of 6 Playing Nintendo Then Moved Onto PC Gaming And <br/>
                         Hasn't Stopped Since</p>
                 </div>
+            </div> */}
             <div className={"flex mt-4"}>
                 <div>
                     <h2 className={"text-2xl uppercase"}>David Griffin</h2>
@@ -95,7 +103,9 @@ export default function TheTeam() {
                     <h2 className={"text-2xl uppercase"}>Mike Xie</h2>
                     <p className={"text-lg"}>Chief Technology Officer (CTO)</p>
                     <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/></p>
-                    <p>Mike is Currently The CTO of The NetVR. He is helping Develop Software.</p>
+                    <p>Mike is currently the Co-Founder and CTO of the Net VR. <br/>
+                    He has played almost every genre of video game and loves to 
+                    <br/>understand the meta-game of each one that he has played.</p>
                 </div>
             </div>
 
@@ -104,18 +114,24 @@ export default function TheTeam() {
                     <h2 className={"text-2xl uppercase"}>Yupeng Zheng</h2>
                     <p className={"text-lg"}>Software Developer</p>
                     <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </p>
-                    <p>Yupeng Zheng is Currently A Software DEveloper at The NetVR</p>
+                    <p>Yupeng graduated from the University of the Pacific with a Bachelor of Science degree. <br/>
+                    He possesses experience in software development and web application design. <br/>
+                    He is both a technology lover and a car enthusiast.</p>
                 </div>
-                <img className={"h-[100px] w-[100px]"} src={NoProfile}/>
+                <img className={"h-[100px] w-[100px]"} src={YupengImage}/>
             </div>
 
             <div className={"flex mt-4"}>
-                <img className={"h-[100px] w-[100px]"} src={NoProfile}/>
+                <img className={"h-[100px] w-[100px]"} src={SarahImage}/>
                 <div className={"ml-[20px]"}>
                     <h2 className={"text-2xl uppercase"}>Sarah Kugelmas</h2>
                     <p className={"text-lg"}>Software Developer</p>
                     <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/></p>
-                    <p>Sarah Kugelmas is Currently a Software Developer at The NetVR</p>
+                    <p>Sarah graduated from Case Western Reserve University <br/>
+                    with a Bachelor's of Science in Computer Science.<br/>
+                     She grew up in New York, went to college in Cleveland, Ohio, <br/>
+                     and now resides in the Research Triangle, North Carolina.
+                     </p>
                 </div>
             </div>
 
@@ -124,9 +140,12 @@ export default function TheTeam() {
                     <h2 className={"text-2xl uppercase"}>Noah Fajarda</h2>
                     <p className={"text-lg"}>Software Developer</p>
                     <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </p>
-                    <p>Noah Fajarda is Currently A Software Developer at The NetVR</p>
+                    <p>Noah is a graduate from the University of California, Irvine. <br/> 
+                    He has experience in developing highly-scalable Full-Stack Applications. <br/>
+                    He enjoys traveling to different countries, analyzing and playing different sports. <br/>
+                    Link to Website: https://noahfajarda.vercel.app/</p>
                 </div>
-                <img className={"h-[100px] w-[100px]"} src={NoProfile}/>
+                <img className={"h-[100px] w-[100px]"} src={NoahImage}/>
             </div>
 
             <div className={"flex mt-4"}>
@@ -144,9 +163,11 @@ export default function TheTeam() {
                     <h2 className={"text-2xl uppercase"}>Abdul Hannan</h2>
                     <p className={"text-lg"}>Software Developer</p>
                     <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </p>
-                    <p>Abdul Hannan is Currently A Software Developer at The NetVR</p>
+                    <p>Hannan is from Karachi, Pakistan. He loves reading novels and cooking <br/>
+                    (picked up chess these days but things ain't looking good) Being from Pakistan, <br/>
+                    there aren't a lot of people who share his hobbies and interests so he enjoys the internet a lot.</p>
                 </div>
-                <img className={"h-[100px] w-[100px]"} src={NoProfile}/>
+                <img className={"h-[100px] w-[100px]"} src={AbdulImage}/>
             </div>
 
             <div className={"flex mt-4"}>
@@ -158,8 +179,7 @@ export default function TheTeam() {
                     <p>Samuel Gbenga is Currently a Ui/UX Designer at The NetVR</p>
                 </div>
             </div>
-
-            </div>
+        </div>
         </motion.div>
       </div>
       <Footer />
