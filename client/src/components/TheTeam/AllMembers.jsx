@@ -1,4 +1,11 @@
 import { useEffect, useState } from "react";
+// framer motion
+import { motion } from "framer-motion";
+import {
+  fadeInLeftVariants,
+  fadeInRightVariants,
+} from "../../utils/framerMotionVariants";
+// constants & components
 import { teamMembers } from "../../utils/Constants";
 import InfoComponent from "./InfoComponent";
 
@@ -36,15 +43,31 @@ export default function AllMembers() {
             <div key={idx} className={teamMemberClasses}>
               {/* index used to alternate profiles */}
               {idx % 2 ? (
-                <div key={idx} className={teamMemberClasses}>
+                <motion.div
+                  key={idx}
+                  variants={fadeInLeftVariants}
+                  initial="hidden"
+                  whileInView="inView"
+                  viewport={fadeInLeftVariants.viewport}
+                  transition={fadeInLeftVariants.transition}
+                  className={teamMemberClasses}
+                >
                   <img className={memberImageClasses} src={member.image} />
                   <InfoComponent member={member} />
-                </div>
+                </motion.div>
               ) : (
-                <div key={idx} className={teamMemberClasses}>
+                <motion.div
+                  key={idx}
+                  variants={fadeInRightVariants}
+                  initial="hidden"
+                  whileInView="inView"
+                  viewport={fadeInRightVariants.viewport}
+                  transition={fadeInRightVariants.transition}
+                  className={teamMemberClasses}
+                >
                   <InfoComponent member={member} />
                   <img className={memberImageClasses} src={member.image} />
-                </div>
+                </motion.div>
               )}
             </div>
           );
