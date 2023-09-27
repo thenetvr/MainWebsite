@@ -11,11 +11,11 @@ export default function TheTeam() {
     <div className="bg-slate-800 h-max">
       <div className="flex flex-col items-center h-fit xl:px-60 lg:px-30 p-10">
         <motion.div
+          className="flex flex-col items-center flex-grow"
           variants={pageVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="w-full"
         >
           <div className="p-8 d-flex">
             <div className="text-sky-500 text-6xl mb-8">THE NET VR TEAM</div>

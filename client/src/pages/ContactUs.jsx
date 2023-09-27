@@ -57,7 +57,7 @@ export default function ContactUs() {
                 <div className={" h-12 w-[220px] mr-10"}>
                   <label className={" text-[24px] block"}> First Name </label>
                   <input
-                    className={"text-white w-[220px]"}
+                    className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
                     type={"text"}
                     name={"fname"}
                     onChange={(e) => setFirstName(e.target.value)}
@@ -67,7 +67,7 @@ export default function ContactUs() {
                   <div className={"h-12 w-80"}>
                     <label className={"text-[24px] block"}> Last Name </label>
                     <input
-                      className={"text-white w-[220px]"}
+                      className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
                       type={"text"}
                       name={"lname"}
                       onChange={(e) => setLastName(e.target.value)}
@@ -80,7 +80,7 @@ export default function ContactUs() {
                 <div className={" h-14 w-[220px] mr-10"}>
                   <label className={"text-[25px] block"}> Email Address</label>
                   <input
-                    className={"text-white w-[220px]"}
+                    className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
                     type={"text"}
                     name={"email"}
                     onChange={(e) => setEmail(e.target.value)}
@@ -89,7 +89,7 @@ export default function ContactUs() {
                 <div className={" h-14 w-80"}>
                   <label className={"text-[24px] block"}> Phone Number</label>
                   <input
-                    className={"text-white w-[220px]"}
+                    className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
                     type={"text"}
                     name={"phoneNumber"}
                     onChange={(e) => setPhoneNumber(e.target.value)}
@@ -101,7 +101,7 @@ export default function ContactUs() {
                 <label className={"text-[24px] block"}>Send a message</label>
                 <textarea
                   rows={8}
-                  className={"text-white w-full"}
+                  className={"text-xl bg-slate-50 text-black p-1 rounded w-full"}
                   type={"text"}
                   name={"userMessage"}
                   onChange={(e) => setMessage(e.target.value)}
