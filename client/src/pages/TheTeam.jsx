@@ -44,7 +44,7 @@ export default function TheTeam() {
                 <div className={"ml-[20px]"}>
                     <h2 className={"text-2xl uppercase"}>Kyle Doran</h2>
                     <p className={"text-lg"}>Chief executive Officer (CEO)</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> <img className={"h-[40px] w-[40px] ml-2"} src={TwitterIcon}/> <img className={"h-[40px] w-[40px] ml-2"} src={TwitchIcon}/></p>
+                    <p className={"flex"}> <a href={"https://www.linkedin.com/in/kyle-doran1/"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a> <img className={"h-[40px] w-[40px] ml-2"} src={TwitterIcon}/> <img className={"h-[40px] w-[40px] ml-2"} src={TwitchIcon}/></p>
                     <p>Kyle Is Currently The Co-Founder And CEO Of The Net VR. He Has A <br/>
                         Bachelor Of Science Degree From Oregon State University With A Focus <br/>
                         In Engineering And Business. Kyle's First Stint Of VR Dates Back To The <br/>
@@ -102,7 +102,8 @@ export default function TheTeam() {
                 <div className={"ml-[20px]"}>
                     <h2 className={"text-2xl uppercase"}>Mike Xie</h2>
                     <p className={"text-lg"}>Chief Technology Officer (CTO)</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/></p>
+                    <p className={"flex"}> <a href={"https://www.linkedin.com/in/mikexie2/"}>
+                        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a> </p>
                     <p>Mike is currently the Co-Founder and CTO of the Net VR. <br/>
                     He has played almost every genre of video game and loves to 
                     <br/>understand the meta-game of each one that he has played.</p>
@@ -113,7 +114,8 @@ export default function TheTeam() {
                 <div>
                     <h2 className={"text-2xl uppercase"}>Yupeng Zheng</h2>
                     <p className={"text-lg"}>Software Developer</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </p>
+                    <p className={"flex"}> <a href={"https://www.linkedin.com/in/yupeng-zheng-5b7957193/"}>
+                        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a> </p>
                     <p>Yupeng graduated from the University of the Pacific with a Bachelor of Science degree. <br/>
                     He possesses experience in software development and web application design. <br/>
                     He is both a technology lover and a car enthusiast.</p>
@@ -126,7 +128,8 @@ export default function TheTeam() {
                 <div className={"ml-[20px]"}>
                     <h2 className={"text-2xl uppercase"}>Sarah Kugelmas</h2>
                     <p className={"text-lg"}>Software Developer</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/></p>
+                    <p className={"flex"}> <a href={"https://github.com/SarahKugelmas"}>
+                        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a></p>
                     <p>Sarah graduated from Case Western Reserve University <br/>
                     with a Bachelor's of Science in Computer Science.<br/>
                      She grew up in New York, went to college in Cleveland, Ohio, <br/>
@@ -139,11 +142,13 @@ export default function TheTeam() {
                 <div>
                     <h2 className={"text-2xl uppercase"}>Noah Fajarda</h2>
                     <p className={"text-lg"}>Software Developer</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </p>
+                    <p className={"flex"}> <a href={"https://github.com/noahfajarda"}>
+                        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a></p>
                     <p>Noah is a graduate from the University of California, Irvine. <br/> 
                     He has experience in developing highly-scalable Full-Stack Applications. <br/>
                     He enjoys traveling to different countries, analyzing and playing different sports. <br/>
-                    Link to Website: https://noahfajarda.vercel.app/</p>
+                    <a href={"https://noahfajarda.vercel.app/"} className={"underline text-blue-600 hover:text-blue-800 visited:text-purple-600"}>
+                        My Website </a> </p>
                 </div>
                 <img className={"h-[100px] w-[100px]"} src={NoahImage}/>
             </div>
@@ -153,8 +158,11 @@ export default function TheTeam() {
                 <div className={"ml-[20px]"}>
                     <h2 className={"text-2xl uppercase"}>Samuel Oyeneyin</h2>
                     <p className={"text-lg"}>Software Developer</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/></p>
-                    <p>Samuel Oyeneyin is Currently a Software Developer at The NetVR</p>
+                    <p className={"flex"}> <a href={"https://www.linkedin.com/in/samuel-oyeneyin-738b32245/"}>
+                        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a> </p>
+                    <p>Samuel is a student at University of Maryland Baltimore County. <br/>
+                        He has experience in web development and web design. <br/>
+                        He enjoys playing video games and drawing in his free time.</p>
                 </div>
             </div>
 
@@ -162,7 +170,8 @@ export default function TheTeam() {
                 <div>
                     <h2 className={"text-2xl uppercase"}>Abdul Hannan</h2>
                     <p className={"text-lg"}>Software Developer</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </p>
+                    <p className={"flex"}> <a href={"https://www.linkedin.com/in/abdul-hannan-0b9364216/"}>
+                        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a> </p>
                     <p>Hannan is from Karachi, Pakistan. He loves reading novels and cooking <br/>
                     (picked up chess these days but things ain't looking good) Being from Pakistan, <br/>
                     there aren't a lot of people who share his hobbies and interests so he enjoys the internet a lot.</p>
@@ -175,8 +184,10 @@ export default function TheTeam() {
                 <div className={"ml-[20px]"}>
                     <h2 className={"text-2xl uppercase"}>Samuel Gbenga</h2>
                     <p className={"text-lg"}>UI/UX Designer</p>
-                    <p className={"flex"}> <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/></p>
-                    <p>Samuel Gbenga is Currently a Ui/UX Designer at The NetVR</p>
+                    <p className={"flex"}> <a href={"https://www.linkedin.com/in/oluwagbenga-samuel-6592a91aa"}>
+                        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon}/> </a> </p>
+                    <p>Samuel is a student at the University of Lagos. <br/> He is a fun-loving, hilarious guy that simply loves design. <br/>
+                        He also loves to watch limited series and he is the guy you want by your side when it is time to cook a great dish.</p>
                 </div>
             </div>
         </div>
