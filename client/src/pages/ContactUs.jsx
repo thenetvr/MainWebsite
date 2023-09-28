@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { pageVariants } from "../utils/framerMotionVariants";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { urlAPI } from "../utils/urls";
 export default function ContactUs() {
   const handleScroll = () => {
     const scrollPosition = window.scrollY; // => scroll position
@@ -25,7 +26,7 @@ export default function ContactUs() {
   const [message, setMessage] = useState("");
   function sendMail() {
     if (email) {
-      axios.post("http://localhost:8080/contactUsMail", {
+      axios.post(urlAPI+"/contactUsMail", {
         firstName: fname,
         lastName: lname,
         email: email,
