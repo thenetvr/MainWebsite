@@ -1,7 +1,7 @@
 import Footer from "../components/Footer";
 import HomeLogo from "../assets/Home-logo.png";
-import HomeTheaterEmpty from "../assets/Home-Theater1.png"
-import HomeTheaterFull from "../assets/Home-Theater2.png"
+import HomeTheaterEmpty from "../assets/Home-Theater1.png";
+import HomeTheaterFull from "../assets/Home-Theater2.png";
 // framer motion
 import { motion } from "framer-motion";
 import { pageVariants } from "../utils/framerMotionVariants";
@@ -36,19 +36,25 @@ export default function Home() {
         animate="visible"
         exit="exit"
       >
-
         <div className="flex justify-center items-center h-80 bg-black w-full mt-0">
-          <div className='items-center'>
+          <div className="items-center">
             <img src={HomeLogo} width={700} height={200} alt="Home Logo" />
             <p className="text-4xl text-center">
               The Net VR is reinventing Virtual Reality <br />
-              in the wake of <span className="text-custom-blue"> MetaVerse </span>
+              in the wake of{" "}
+              <span className="text-custom-blue"> MetaVerse </span>
             </p>
           </div>
         </div>
 
         <div className="flex items-center justify-end">
-          <img src={HomeTheaterEmpty} width={584} height={450} alt="Home Theater" className="mt-12 mr-40" />
+          <img
+            src={HomeTheaterEmpty}
+            width={584}
+            height={450}
+            alt="Home Theater"
+            className="mt-12 mr-40"
+          />
           <div className="z-10">
             <div className="flex flex-col">
               <p className="mb-16 self-start text-custom-blue text-4xl font-semibold">
@@ -78,7 +84,13 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <img src={HomeTheaterFull} width={584} height={450} alt="Home Theater" className="mt-16 ml-40 mb-10" />
+          <img
+            src={HomeTheaterFull}
+            width={584}
+            height={450}
+            alt="Home Theater"
+            className="mt-16 ml-40 mb-10"
+          />
         </div>
 
         {/*<div>*/}

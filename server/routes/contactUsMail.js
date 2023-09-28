@@ -40,7 +40,7 @@ router.post("/contactUsMail", async (req, res) => {
       // HTML email template used
       source = fs.readFileSync('./templates/email_contact_us_template.html', 'utf-8')
         .toString();
-    } 
+    }
     const template = handlebars.compile(source);
 
     // specify variables for email template
