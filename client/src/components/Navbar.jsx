@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import MobileNavbar from "./Modal";
 
 // navbar icons
@@ -35,7 +35,7 @@ export default function Navbar() {
     { name: "The Team", href: "/the-team", current: false, icon: IconThree },
   ]);
 
-  // randle refresh
+  // handle refresh
   useEffect(() => {
     handleNavItemClick(window.location.pathname);
   }, []);
@@ -51,6 +51,11 @@ export default function Navbar() {
     );
   };
 
+  // redirects to previous page history.
+  const goBack = () => {
+    let navigate = useNavigate();
+    return navigate(-1);
+  }
   return (
     <div className="sticky top-0 z-50">
       <div className="flex bg-black justify-between h-28">
@@ -81,7 +86,7 @@ export default function Navbar() {
                 "rounded-md px-3 py-10 sm:text-sm md:text-md lg:text-xl font-medium flex items-center h-4/5 text-center"
               )}
               aria-current={item.current ? "page" : undefined}
-              onClick={() => handleNavItemClick(item.href)}
+              onClick={() => goBack()}
             >
               {item.name}
             </Link>
