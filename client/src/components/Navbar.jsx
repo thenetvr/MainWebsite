@@ -74,7 +74,7 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <div className="hidden sm:d-none md:flex space-x-4 p-7 items-center">
+        <div className="hidden sm:d-none md:flex space-x-4 p-7 items-center justify-around w-5/6">
           {navigation.map((item) => (
             <Link
               key={item.name}
