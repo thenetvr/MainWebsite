@@ -18,3 +18,43 @@ export const pageVariants = {
     },
   },
 };
+
+export const fadeInLeftVariants = {
+  hidden: {
+    x: -80,
+    opacity: 0,
+  },
+  inView: {
+    opacity: 1,
+    x: 0
+  },
+  viewport: {
+    once: true,
+    amount: 0.2
+  },
+  transition: {
+    type: "tween",
+    ease: "easeOut",
+    duration: 1
+  }
+}
+
+export const fadeInRightVariants = {
+  hidden: {
+    x: 80,
+    opacity: 0,
+  },
+  inView: {
+    opacity: 1,
+    x: 0
+  },
+  viewport: {
+    once: true,
+    amount: 0.2
+  },
+  transition: {
+    type: "tween",
+    ease: "easeOut",
+    duration: 1
+  }
+}

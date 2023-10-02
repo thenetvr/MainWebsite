@@ -228,3 +228,124 @@ export const netVRTheaterPoints = {
     "Storage: 2GB Available Space"
   ]
 }
+
+import KyleImage from "../assets/ProfilePictures/KyleImage.png";
+import BruinImage from "../assets/BruinImage.png";
+import SusanImage from "../assets/SusanImage.png";
+import DavidImage from "../assets/ProfilePictures/DavidImage.png";
+import MikeImage from "../assets/ProfilePictures/MikeXieImage.Jpeg";
+import AbdulImage from "../assets/ProfilePictures/AbdulHannanImage.png";
+import AlanImage from "../assets/ProfilePictures/AlanTuckerImage.jpg";
+import NoahImage from "../assets/ProfilePictures/NoahFajardaImage.png";
+import SarahImage from "../assets/ProfilePictures/SarahKugelmasImage.jpg";
+import YupengImage from "../assets/ProfilePictures/YupengImage.jpeg";
+import NoProfile from "../assets/NoProfilePic.png";
+
+export const teamMembers = [
+  {
+    name: "Kyle Doran",
+    image: KyleImage,
+    role: "Chief executive Officer (CEO)",
+    description: `Kyle Is Currently The Co-Founder And CEO Of The Net VR. He
+      Has A Bachelor Of Science Degree From Oregon State
+      University With A Focus In Engineering And Business. Kyle's
+      First Stint Of VR Dates Back To The Launch Of The Nintendo
+      Virtual Boy In 1995. He Has Been Passionate About Gaming
+      Ever Since. Another Passion Of His Is Continually Striving
+      To Be A Positive Leader So It Is Only Fitting He Has Become
+      As Such Of A Growing Gaming Company.`,
+  },
+  {
+    name: "Bruin Peyton",
+    image: BruinImage,
+    position: "Chief Technology Officer (CTO)",
+    description:
+      `Bruin Is Currently The Co-Founder And CTO Of The Net VR. Bruin Is A 
+      Self-Taught Developer With Over 20 Years Of Experience. He Has Lead Several 
+      Teams Within Corporate IT Before Co-Founding The Company. His Primary Expertise 
+      Includes C#, Databases, Networking And Unity`,
+  },
+  {
+    name: "Susan Sunwoo",
+    image: SusanImage,
+    position: "Chief Operations Officer (COO)",
+    description:
+      `Susan Is Currently The COO Of The Net VR And An E-Commerce Entrepreneur With 
+      A Successful Stationary Company. She Is A Graduate Of The University Of Houston 
+      With A Bachelor Of Business Administration Degree In Finance And Marketing. In Her 
+      Personal Life She Co-Founded An Event And Movement For Self Growth, Mental Health 
+      And Community Called Define And Flourish. D&F's Motto Was 'Define Your Passion And 
+      Flourish In Life'. She Discovered Gaming At The Age Of 6 Playing Nintendo Then 
+      Moved Onto PC Gaming And Hasn't Stopped Since`,
+  },
+  {
+    name: "David Griffin",
+    image: DavidImage,
+    position: "Chief Financial Officer (CFO)",
+    description:
+      `David Is Currently The CFO Of The Net VR. He Has A Bachelor Of Science Degree From 
+      The University Of Oregon, With Majors In Mathematics And Economics And Minors In 
+      Business, Chemistry, And Political Science. He Has Over 15 Years Of Self-Employment 
+      And Consulting Experience, And Has Spent The Last 7 Years As A Digital Nomad`,
+  },
+  {
+    name: "Mike Xie",
+    image: MikeImage,
+    position: "Chief Technology Officer (CTO)",
+    description:
+      `Mike is currently the Co-Founder and CTO of the Net VR. He has played almost every 
+      genre of video game and loves to understand the meta-game of each one that he has 
+      played.`,
+  },
+  {
+    name: "Noah Fajarda",
+    image: NoahImage,
+    position: "Software Developer",
+    description:
+      `Noah is a graduate from the University of California, Irvine. He has experience in 
+      developing highly-scalable Full-Stack Applications. He enjoys traveling to different 
+      countries, analyzing and playing different sports. 
+      Link to Website: https://noahfajarda.vercel.app/`,
+  },
+  {
+    name: "Yupeng Zheng",
+    image: YupengImage,
+    position: "Software Developer",
+    description:
+      `Yupeng graduated from the University of the Pacific with a Bachelor of Science degree.
+       He possesses experience in software development and web application design. 
+       He is both a technology lover and a car enthusiast.`,
+  },
+  {
+    name: "Sarah Kugelmas",
+    image: SarahImage,
+    position: "Software Developer",
+    description:
+      `Sarah graduated from Case Western Reserve University with a Bachelor's of Science 
+      in Computer Science. She grew up in New York, went to college in Cleveland, Ohio, 
+      and now resides in the Research Triangle, North Carolina.`,
+  },
+
+  {
+    name: "Samuel Oyeneyin",
+    image: NoProfile,
+    position: "Software Developer",
+    description:
+      `Samuel Oyeneyin is Currently a Software Developer at The NetVR`,
+  },
+  {
+    name: "Abdul Hannan",
+    image: AbdulImage,
+    position: "Software Developer",
+    description:
+      `Hannan is from Karachi, Pakistan. He loves reading novels and cooking (picked up 
+        chess these days but things ain't looking good) Being from Pakistan, there aren't
+         a lot of people who share his hobbies and interests so he enjoys the internet a lot.`,
+  },
+  {
+    name: "Samuel Gbenga",
+    image: NoProfile,
+    position: "UI/UX Designer",
+    description: `Samuel Gbenga is Currently a Ui/UX Designer at The NetVR`,
+  },
+];
