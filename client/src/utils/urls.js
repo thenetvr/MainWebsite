@@ -1,0 +1,1 @@
+export const urlAPI = "http://3.23.255.73:8080"
