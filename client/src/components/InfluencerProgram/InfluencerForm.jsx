@@ -1,11 +1,23 @@
 import { useReducer } from "react";
 import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function InfluencerForm() {
   const fieldText = "w-64 text-xl bg-slate-50 text-black p-1 rounded";
   const fieldEl = "p-3";
   const fieldLabel = "py-3";
-
+  const notify = () => {
+    toast.success("Message Sent! We'll Get Back To You Soon!", {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
   const [state, dispatch] = useReducer(
     (state, action) => ({
       ...state,
@@ -42,6 +54,7 @@ export default function InfluencerForm() {
       streamingChannel: state.streamingChannel,
       twitter: state.twitter,
     })
+    notify();
     console.log(state);
   };
 

@@ -24,6 +24,6 @@ const PORT = process.env.PORT || 8080;
 
 // listener
 const server = app.listen(PORT, () => {
-  console.log(`Sever is running on port ${PORT}`);
-  console.log(`Sever is running on http://localhost:${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
