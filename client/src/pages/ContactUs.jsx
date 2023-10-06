@@ -4,35 +4,64 @@ import { motion } from "framer-motion";
 import { pageVariants } from "../utils/framerMotionVariants";
 import { useEffect, useState } from "react";
 import axios from "axios";
+// toast
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { urlAPI } from "../utils/urls";
 export default function ContactUs() {
   const handleScroll = () => {
     const scrollPosition = window.scrollY; // => scroll position
-    console.log(scrollPosition);
+    // console.log(scrollPosition);
   };
   useEffect(() => {
+    // console.log(window);
     handleScroll();
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-  console.log(window);
+
+  const notify = () => {
+    toast.success("Message Sent! We'll Get Back To You Soon!", {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  };
 
   const [email, setEmail] = useState("");
   const [fname, setFirstName] = useState("");
   const [lname, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
-  function sendMail() {
-    if (email) {
-      axios.post(urlAPI+"/contactUsMail", {
+  async function sendMail(e) {
+    try {
+      e.preventDefault();
+      // check for an email
+      if (!email) return;
+      // do post request
+      await axios.post(urlAPI+"/contactUsMail", {
         firstName: fname,
         lastName: lname,
         email: email,
         phoneNumber: phoneNumber,
         message: message,
       });
+
+      setEmail("");
+      setFirstName("");
+      setLastName("");
+      setPhoneNumber("");
+      setMessage("");
+      notify();
+    } catch (err) {
+      console.error(err);
     }
   }
   return (
@@ -58,7 +87,9 @@ export default function ContactUs() {
                 <div className={" h-12 w-[220px] mr-10"}>
                   <label className={" text-[24px] block"}> First Name </label>
                   <input
-                    className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
+                    className={
+                      "text-xl bg-slate-50 text-black p-1 rounded w-[220px]"
+                    }
                     type={"text"}
                     name={"fname"}
                     onChange={(e) => setFirstName(e.target.value)}
@@ -68,7 +99,9 @@ export default function ContactUs() {
                   <div className={"h-12 w-80"}>
                     <label className={"text-[24px] block"}> Last Name </label>
                     <input
-                      className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
+                      className={
+                        "text-xl bg-slate-50 text-black p-1 rounded w-[220px]"
+                      }
                       type={"text"}
                       name={"lname"}
                       onChange={(e) => setLastName(e.target.value)}
@@ -81,7 +114,9 @@ export default function ContactUs() {
                 <div className={" h-14 w-[220px] mr-10"}>
                   <label className={"text-[25px] block"}> Email Address</label>
                   <input
-                    className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
+                    className={
+                      "text-xl bg-slate-50 text-black p-1 rounded w-[220px]"
+                    }
                     type={"text"}
                     name={"email"}
                     onChange={(e) => setEmail(e.target.value)}
@@ -90,7 +125,9 @@ export default function ContactUs() {
                 <div className={" h-14 w-80"}>
                   <label className={"text-[24px] block"}> Phone Number</label>
                   <input
-                    className={"text-xl bg-slate-50 text-black p-1 rounded w-[220px]"}
+                    className={
+                      "text-xl bg-slate-50 text-black p-1 rounded w-[220px]"
+                    }
                     type={"text"}
                     name={"phoneNumber"}
                     onChange={(e) => setPhoneNumber(e.target.value)}
@@ -102,7 +139,9 @@ export default function ContactUs() {
                 <label className={"text-[24px] block"}>Send a message</label>
                 <textarea
                   rows={8}
-                  className={"text-xl bg-slate-50 text-black p-1 rounded w-full"}
+                  className={
+                    "text-xl bg-slate-50 text-black p-1 rounded w-full"
+                  }
                   type={"text"}
                   name={"userMessage"}
                   onChange={(e) => setMessage(e.target.value)}
@@ -114,11 +153,23 @@ export default function ContactUs() {
                   "float-right mt-5"
                 }
                 type={"submit"}
-                onClick={() => sendMail()}
+                onClick={sendMail}
               >
                 Submit
               </button>
             </form>
+            {/* toast container */}
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={true}
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss={false}
+              draggable
+              pauseOnHover
+            />
           </motion.div>
         </div>
       </div>

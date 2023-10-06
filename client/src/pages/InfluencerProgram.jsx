@@ -7,6 +7,9 @@ import hostTheater from "../assets/influencerProgram/hostTheater.png";
 import streamExample from "../assets/influencerProgram/netVRstreamExample.png";
 import InfluencerForm from "../components/InfluencerProgram/InfluencerForm";
 import Platforms from "../components/shared/Platforms";
+// toast
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function InfluencerProgram() {
   return (
@@ -60,6 +63,18 @@ export default function InfluencerProgram() {
 
               {/* form */}
               <InfluencerForm />
+              {/* toast container */}
+            <ToastContainer
+              position="top-right"
+              autoClose={5000}
+              hideProgressBar={true}
+              newestOnTop
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss={false}
+              draggable
+              pauseOnHover
+            />
             </div>
           </div>
         </motion.div>
