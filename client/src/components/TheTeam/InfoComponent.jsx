@@ -19,7 +19,7 @@ export default function InfoComponent({ member }) {
         {member.name}
       </h1>
       {/* role */}
-      <p className="phone:text-center lg:text-left text-lg">{member.role}</p>
+      <p className="lg:text-left text-center text-lg">{member.role}</p>
       {/* socials */}
       <div className="flex mt-2 justify-center lg:justify-start">
         <img className={"h-[40px] w-[40px]"} src={LinkedinIcon} />
@@ -29,7 +29,7 @@ export default function InfoComponent({ member }) {
         <img className={"h-[40px] w-[40px]"} src={TIkTokIcon} />
       </div>
       {/* description */}
-      <div className="mt-7">{member.description}</div>
+      <div className="my-7 lg:text-left text-center">{member.description}</div>
     </div>
   );
 }

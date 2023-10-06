@@ -32,7 +32,7 @@ export default function AllMembers() {
       {/* person */}
       {teamMembers.map((member, idx) => {
         const teamMemberClasses =
-          "w-full p-10 flex lg:flex-row flex-col items-center";
+          "w-full phone:p-10 flex lg:flex-row flex-col items-center";
 
         const memberImageClasses =
           "w-[300px] h-[300px] border border-4 border-sky-500 rounded-xl";

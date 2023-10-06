@@ -13,12 +13,12 @@ export default function Modal({ navigation, handleNavItemClick }) {
             <Popover.Button
               className={`
                 ${open ? "" : "text-opacity-90"}
-                group inline-flex items-center rounded-md bg-orange-700 px-3 py-2 text-base font-medium text-white hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                group inline-flex items-center rounded-md bg-sky-600 px-3 py-2 text-base font-medium text-white hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
               <span>Menu</span>
               <ChevronDownIcon
                 className={`${open ? "" : "text-opacity-70"}
-                  ml-2 h-5 w-5 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
+                  ml-2 h-5 w-5 text-sky-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
                 aria-hidden="true"
               />
             </Popover.Button>
