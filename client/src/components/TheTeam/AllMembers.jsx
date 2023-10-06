@@ -76,7 +76,7 @@ export default function AllMembers() {
             <div key={idx} className={teamMemberClasses}>
               <div key={idx} className={teamMemberClasses}>
                 <img className={memberImageClasses} src={member.image} />
-                <div className="pt-4">
+                <div className="pt-4 flex justify-center">
                   <InfoComponent member={member} />
                 </div>
               </div>
