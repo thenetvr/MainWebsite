@@ -8,6 +8,7 @@ import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+import { urlAPI } from "../utils/urls";
 export default function ContactUs() {
   const handleScroll = () => {
     const scrollPosition = window.scrollY; // => scroll position
@@ -45,7 +46,7 @@ export default function ContactUs() {
       // check for an email
       if (!email) return;
       // do post request
-      await axios.post("http://localhost:8080/contactUsMail", {
+      await axios.post(urlAPI + "/contactUsMail", {
         firstName: fname,
         lastName: lname,
         email: email,

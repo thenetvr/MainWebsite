@@ -17,6 +17,7 @@ export default function TheTeam() {
           animate="visible"
           exit="exit"
         >
+
           <div className="p-8 d-flex">
             <div className="text-sky-500 text-6xl mb-8">THE NET VR TEAM</div>
 
