@@ -40,9 +40,13 @@ export default function ContactUs() {
   const [lname, setLastName] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [message, setMessage] = useState("");
-  function sendMail() {
-    if (email) {
-      axios.post(urlAPI+"/contactUsMail", {
+  async function sendMail(e) {
+    try {
+      e.preventDefault();
+      // check for an email
+      if (!email) return;
+      // do post request
+      await axios.post(urlAPI+"/contactUsMail", {
         firstName: fname,
         lastName: lname,
         email: email,
