@@ -27,10 +27,10 @@ export default function AvailableFeatures({ listStyling }) {
   ];
 
   return (
-    <div className="flex py-8">
+    <div className="flex sm:flex-row flex-col py-8">
       {data.map((section, idx) => (
         <div
-          className={`w-3/6 border-2 border-sky-500 ${section.mar} p-4`}
+          className={`w-3/6 w-full border-2 border-sky-500 ${section.mar} p-4`}
           key={idx}
         >
           <h1 className="font-bold text-2xl text-sky-500">

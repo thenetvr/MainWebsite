@@ -10,14 +10,16 @@ export default function VideoContainer() {
     <Container>
       <div className="flex justify-center">
         {videoURL && (
-          <div className="ratio ratio-16x9">
-            <iframe
-              src={videoURL}
-              title="YouTube Video"
-              height="540px"
-              width="720px"
-              allowFullScreen
-            ></iframe>
+          <div className="relative block w-full">
+            <div className="ratio ratio-16x9">
+              <iframe
+                src={videoURL}
+                title="YouTube Video"
+                height="500px"
+                width="100%"
+                allowFullScreen
+              ></iframe>
+            </div>
           </div>
         )}
       </div>
