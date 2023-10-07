@@ -33,10 +33,10 @@ export default function Modal({ navigation, handleNavItemClick }) {
             >
               <Popover.Panel
                 className="absolute 
-              -left-24 z-10 mt-3 w-screen max-w-sm -translate-x-[11rem] transform px-4 px-0 lg:max-w-3xl
+              -left-24 z-10 mt-3 max-w-sm w-screen phone:-translate-x-[180px] -translate-x-[127px] transform px-4 px-0 lg:max-w-3xl
               "
               >
-                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="phone:w-full w-11/12 overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
                     {navigation.map((item) => (
                       <Link
