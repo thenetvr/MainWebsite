@@ -23,7 +23,9 @@ export default function InfluencerProgram() {
           className="w-full"
         >
           <div className="p-8 d-flex">
-            <div className="text-sky-500 text-6xl mb-6">INFLUENCER PROGRAM</div>
+            <div className="sm:text-left text-center text-sky-500 text-6xl mb-8">
+              INFLUENCER PROGRAM
+            </div>
             <div className="mb-10">
               Calling all celebrities, influencers, streamers, content creators
               and performers broadcasting LIVE! We're here to provide access to
@@ -64,17 +66,17 @@ export default function InfluencerProgram() {
               {/* form */}
               <InfluencerForm />
               {/* toast container */}
-            <ToastContainer
-              position="top-right"
-              autoClose={5000}
-              hideProgressBar={true}
-              newestOnTop
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss={false}
-              draggable
-              pauseOnHover
-            />
+              <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={true}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover
+              />
             </div>
           </div>
         </motion.div>

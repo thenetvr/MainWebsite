@@ -18,7 +18,7 @@ export default function TheTeam() {
           exit="exit"
         >
           <div className="p-8 d-flex">
-            <div className=" sm:text-left text-center text-sky-500 text-6xl mb-8">
+            <div className="sm:text-left text-center text-sky-500 text-6xl mb-8">
               THE NET VR TEAM
             </div>
             <div className="flex justify-center">
