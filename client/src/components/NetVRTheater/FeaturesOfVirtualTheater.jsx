@@ -4,7 +4,7 @@ import { netVRTheaterPoints } from "../../utils/Constants";
 export default function FeaturesOfVirtualTheater({ listStyling }) {
   const { features } = netVRTheaterPoints;
   return (
-    <div className="grid grid-cols-3 gap-4 mb-10">
+    <div className="phone:flex phone:flex-col grid grid-cols-3 gap-4 mb-10">
       <div className="text-sky-500 text-3xl">Features Of Virtual Theater</div>
       <div className="col-span-2">
         <ul
