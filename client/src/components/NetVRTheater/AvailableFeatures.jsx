@@ -10,7 +10,6 @@ export default function AvailableFeatures({ listStyling }) {
   const data = [
     {
       val: userViewers,
-      mar: "mr-2",
       headText: "User/Viewers",
       image: viewers,
       pad: 5,
@@ -18,7 +17,6 @@ export default function AvailableFeatures({ listStyling }) {
     },
     {
       val: contentCreatorsFeatures,
-      mar: "ml-2",
       headText: "Content Creators",
       image: contentCreators,
       pad: 3,
@@ -30,7 +28,7 @@ export default function AvailableFeatures({ listStyling }) {
     <div className="flex sm:flex-row flex-col py-8">
       {data.map((section, idx) => (
         <div
-          className={`w-3/6 w-full border-2 border-sky-500 ${section.mar} p-4`}
+          className={`w-3/6 w-full border-2 border-sky-500 m-2 p-4`}
           key={idx}
         >
           <h1 className="font-bold text-2xl text-sky-500">

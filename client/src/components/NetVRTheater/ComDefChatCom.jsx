@@ -11,8 +11,8 @@ export default function ComDefChatCom({ listStyling }) {
         <div className="text-sky-500 text-3xl w-1/2">Command Definitions</div>
         <div className="text-sky-500 text-3xl w-1/2 pl-2">Chat Command</div>
       </div>
-      <div className="flex py-8">
-        <div className="w-3/6 border-2 border-sky-500 mr-2 p-4">
+      <div className="flex sm:flex-row flex-col py-8">
+        <div className={`w-3/6 w-full border-2 border-sky-500 m-2 p-4`}>
           <div className="p-3">
             <ul
               role="list"
@@ -25,7 +25,7 @@ export default function ComDefChatCom({ listStyling }) {
             </ul>
           </div>
         </div>
-        <div className="w-3/6 border-2 border-sky-500 ml-2 p-4">
+        <div className={`w-3/6 w-full border-2 border-sky-500 m-2 p-4`}>
           <div className="p-3">
             <ul
               role="list"

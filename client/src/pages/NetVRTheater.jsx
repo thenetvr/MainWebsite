@@ -21,7 +21,7 @@ export default function NetVRTheater() {
 
   return (
     <div className="bg-slate-800 h-max">
-      <div className="flex flex-col items-center h-fit xl:px-60 lg:px-30 p-10">
+      <div className="flex flex-col items-center h-fit xl:px-60 lg:px-30 md:p-10 py-10">
         <motion.div
           className="flex flex-col items-center flex-grow"
           variants={pageVariants}
@@ -29,14 +29,16 @@ export default function NetVRTheater() {
           animate="visible"
           exit="exit"
         >
-          <div className="phone:w-full phone:p-8 d-flex w-3/6">
+          <div className="phone:w-full w-9/12 phone:p-8 d-flex">
             <div className="sm:text-left phone:text-6xl text-center text-sky-500 text-4xl mb-8">
               THE NET VR THEATER
             </div>
             {/* features */}
             <FeaturesOfVirtualTheater listStyling={listStyling} />
             {/* video container */}
-            <VideoContainer />
+            <div className="flex justify-center">
+              <VideoContainer />
+            </div>
             {/* demo images */}
             <Demos />
             {/* host streams / platforms */}
@@ -58,11 +60,10 @@ export default function NetVRTheater() {
             <ComDefChatCom listStyling={listStyling} />
             {/* System Requirements */}
             <SystemRequirements />
-            <div className="flex justify-center align-center">
+            <div className="flex sm:flex-row flex-col justify-center items-center align-center">
               <img
-                className="py-9 pr-3"
+                className="py-9 pr-3 sm:w-16"
                 src={GDCWinner}
-                width="60"
                 alt="host Theater"
               />
               <div className="flex items-center pr-3">

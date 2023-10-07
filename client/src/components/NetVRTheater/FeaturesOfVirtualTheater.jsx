@@ -8,7 +8,7 @@ export default function FeaturesOfVirtualTheater({ listStyling }) {
       <div className="sm:text-left sm:text-3xl text-sky-500 text-2xl text-center">
         Features Of Virtual Theater
       </div>
-      <div className="sm:flex col-span-2">
+      <div className="phone:mt-0 mt-4 sm:flex col-span-2">
         <ul
           role="list"
           className={listStyling}
