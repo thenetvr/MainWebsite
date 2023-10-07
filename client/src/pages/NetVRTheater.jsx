@@ -29,7 +29,9 @@ export default function NetVRTheater() {
           exit="exit"
         >
           <div className="p-8 d-flex">
-            <div className="text-sky-500 text-6xl mb-8">THE NET VR THEATER</div>
+            <div className="sm:text-left text-center text-sky-500 text-6xl mb-8">
+              THE NET VR THEATER
+            </div>
             {/* features */}
             <FeaturesOfVirtualTheater listStyling={listStyling} />
             {/* video container */}
