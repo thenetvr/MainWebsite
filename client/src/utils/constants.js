@@ -233,7 +233,7 @@ import KyleImage from "../assets/ProfilePictures/KyleImage.png";
 import BruinImage from "../assets/BruinImage.png";
 import SusanImage from "../assets/SusanImage.png";
 import DavidImage from "../assets/ProfilePictures/DavidImage.png";
-import MikeImage from "../assets/ProfilePictures/MikeXieImage.Jpeg";
+import MikeImage from "../assets/ProfilePictures/MikeXieImage.jpeg";
 import AbdulImage from "../assets/ProfilePictures/AbdulHannanImage.png";
 import AlanImage from "../assets/ProfilePictures/AlanTuckerImage.jpg";
 import NoahImage from "../assets/ProfilePictures/NoahFajardaImage.png";

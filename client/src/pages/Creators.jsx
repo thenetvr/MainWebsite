@@ -13,7 +13,6 @@ const contentCreators = {"Awra":["https://www.twitch.tv/awra_", creatorIcon.Awra
     "Steazey":["https://www.twitch.tv/steazey",creatorIcon.SteazeyIcon], "Catzawr":["https://www.twitch.tv/catzawr", creatorIcon.CatzawrIcon],
     "JonsyGG":["https://www.twitch.tv/jonsygg", creatorIcon.JonsyGGIcon],"RaiderRCLive":["https://www.twitch.tv/raiderrclive", creatorIcon.RaiderRCLiveIcon]}
 
-import {useEffect} from "react";
 const displayCreators = () => {
     const creators = [];
     for (let username in contentCreators) {
@@ -37,19 +36,25 @@ export default function Creators() {
                         animate="visible"
                         exit="exit"
                     >
-                    <div className={"flex w-2/3 justify-center mx-auto mb-40"}>
+                    <div className={"flex flex-col w-2/3 items-center mx-auto mb-10"}>
                         <div>
-                            <img className={""} src={NetVRTheater} alt="image"/>
+                            <h1 className={"text-4xl text-custom-blue mb-4"}>Content Creators</h1>
                         </div>
-                        <div>
-                            <h1 className={"text-4xl text-custom-blue mb-16"}>Content Creators</h1>
-                            <p className={"text-xl leading-6"}>Check out our featured creators that are currently using <br/>
-                                the auto-host through The Net VR Theater.<br/>
-                                If you want to be featured, then sign up for our<br/>
-                                Influencer Program!</p>
+                        <div className={"flex flex-col items-center md:flex-row items-normal"}>
+                            <div>
+                                <img src={NetVRTheater} alt="image"/>
+                            </div>
+
+                            <div className={"ml-4"}>
+                            <p className={"text-xl leading-6 mt-4"}>Check out our featured creators that are currently using <br/>
+                                    the auto-host through The Net VR Theater.<br/>
+                                    If you want to be featured, then sign up for our<br/>
+                                    Influencer Program!</p>
+                            </div>
                         </div>
+
                     </div>
-                    <div className={"flex flex-wrap w-3/5 mx-auto"}>
+                    <div className={"flex flex-wrap w-3/5 mx-auto justify-center md:justify-normal"}>
                         {displayCreators()}
                     </div>
                     </motion.div>
