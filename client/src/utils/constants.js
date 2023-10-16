@@ -255,29 +255,29 @@ export const teamMembers = [
       To Be A Positive Leader So It Is Only Fitting He Has Become
       As Such Of A Growing Gaming Company.`,
   },
-  {
-    name: "Bruin Peyton",
-    image: BruinImage,
-    position: "Chief Technology Officer (CTO)",
-    description:
-      `Bruin Is Currently The Co-Founder And CTO Of The Net VR. Bruin Is A 
-      Self-Taught Developer With Over 20 Years Of Experience. He Has Lead Several 
-      Teams Within Corporate IT Before Co-Founding The Company. His Primary Expertise 
-      Includes C#, Databases, Networking And Unity`,
-  },
-  {
-    name: "Susan Sunwoo",
-    image: SusanImage,
-    position: "Chief Operations Officer (COO)",
-    description:
-      `Susan Is Currently The COO Of The Net VR And An E-Commerce Entrepreneur With 
-      A Successful Stationary Company. She Is A Graduate Of The University Of Houston 
-      With A Bachelor Of Business Administration Degree In Finance And Marketing. In Her 
-      Personal Life She Co-Founded An Event And Movement For Self Growth, Mental Health 
-      And Community Called Define And Flourish. D&F's Motto Was 'Define Your Passion And 
-      Flourish In Life'. She Discovered Gaming At The Age Of 6 Playing Nintendo Then 
-      Moved Onto PC Gaming And Hasn't Stopped Since`,
-  },
+  // {
+  //   name: "Bruin Peyton",
+  //   image: BruinImage,
+  //   position: "Chief Technology Officer (CTO)",
+  //   description:
+  //     `Bruin Is Currently The Co-Founder And CTO Of The Net VR. Bruin Is A 
+  //     Self-Taught Developer With Over 20 Years Of Experience. He Has Lead Several 
+  //     Teams Within Corporate IT Before Co-Founding The Company. His Primary Expertise 
+  //     Includes C#, Databases, Networking And Unity`,
+  // },
+  // {
+  //   name: "Susan Sunwoo",
+  //   image: SusanImage,
+  //   position: "Chief Operations Officer (COO)",
+  //   description:
+  //     `Susan Is Currently The COO Of The Net VR And An E-Commerce Entrepreneur With 
+  //     A Successful Stationary Company. She Is A Graduate Of The University Of Houston 
+  //     With A Bachelor Of Business Administration Degree In Finance And Marketing. In Her 
+  //     Personal Life She Co-Founded An Event And Movement For Self Growth, Mental Health 
+  //     And Community Called Define And Flourish. D&F's Motto Was 'Define Your Passion And 
+  //     Flourish In Life'. She Discovered Gaming At The Age Of 6 Playing Nintendo Then 
+  //     Moved Onto PC Gaming And Hasn't Stopped Since`,
+  // },
   {
     name: "David Griffin",
     image: DavidImage,
@@ -293,9 +293,9 @@ export const teamMembers = [
     image: MikeImage,
     position: "Chief Technology Officer (CTO)",
     description:
-      `Mike is currently the Co-Founder and CTO of the Net VR. He has played almost every 
-      genre of video game and loves to understand the meta-game of each one that he has 
-      played.`,
+      `Mike is currently the Co-Founder and CTO of the Net VR. He is a UTD alumni and 
+      he has played almost every genre of video game and loves to understand the 
+      meta-game of each one that he has played.`,
   },
   {
     name: "Noah Fajarda",
