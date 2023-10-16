@@ -11,10 +11,10 @@ export default function InShopPurchase({ listStyling }) {
   return (
     <div className="py-3">
       <div className="text-sky-500 text-3xl">In-Shop Purchase</div>
-      <div className="flex py-8">
+      <div className="flex sm:flex-row flex-col py-8">
         {data.map((obj, idx) => (
           <div
-            className={`w-3/6 border-2 border-sky-500 ${obj.mar} p-4`}
+            className={`w-3/6 w-full border-2 border-sky-500 m-2 p-4`}
             key={idx}
           >
             <div className="p-3">

@@ -13,12 +13,12 @@ export default function Modal({ navigation, handleNavItemClick }) {
             <Popover.Button
               className={`
                 ${open ? "" : "text-opacity-90"}
-                group inline-flex items-center rounded-md bg-orange-700 px-3 py-2 text-base font-medium text-white hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                group inline-flex items-center rounded-md bg-sky-600 px-3 py-2 text-base font-medium text-white hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
               <span>Menu</span>
               <ChevronDownIcon
                 className={`${open ? "" : "text-opacity-70"}
-                  ml-2 h-5 w-5 text-orange-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
+                  ml-2 h-5 w-5 text-sky-300 transition duration-150 ease-in-out group-hover:text-opacity-80`}
                 aria-hidden="true"
               />
             </Popover.Button>
@@ -33,10 +33,10 @@ export default function Modal({ navigation, handleNavItemClick }) {
             >
               <Popover.Panel
                 className="absolute 
-              -left-24 z-10 mt-3 w-screen max-w-sm -translate-x-[11rem] transform px-4 px-0 lg:max-w-3xl
+              -left-24 z-10 mt-3 max-w-sm w-screen phone:-translate-x-[180px] -translate-x-[127px] transform px-4 px-0 lg:max-w-3xl
               "
               >
-                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
+                <div className="phone:w-full w-11/12 overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
                     {navigation.map((item) => (
                       <Link

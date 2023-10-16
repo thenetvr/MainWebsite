@@ -46,7 +46,7 @@ export default function ContactUs() {
       // check for an email
       if (!email) return;
       // do post request
-      await axios.post(urlAPI+"/contactUsMail", {
+      await axios.post(urlAPI + "/contactUsMail", {
         firstName: fname,
         lastName: lname,
         email: email,

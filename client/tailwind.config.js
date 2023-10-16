@@ -11,6 +11,9 @@ export default {
       },
       colors: {
         'custom-blue': 'rgba(72, 139, 193, 1)'
+      },
+      screens: {
+        'phone': '415px'
       }
     },
   },

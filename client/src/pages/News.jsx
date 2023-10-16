@@ -96,33 +96,6 @@ const displayNews = () => {
   };
 
   for (let news in newsInfo) {
-    if (count < 12) {
-      currentRow.push(
-        <div style={{maxWidth: '300px', wordWrap: 'break-word', marginLeft: "40px"}} key={news}>
-          <div className="flex flex-col items-start">
-            <img className="mt-10" src={newsInfo[news][1]} alt="news image" style={imageSize}/>
-            <p className="mt-2">{newsInfo[news][3]}</p>
-            <p className="mt-2">{newsInfo[news][2]}</p>
-          </div>
-          <div className="underline mt-2 text-custom-blue">
-            <a href={newsInfo[news][0]}>
-              {news}
-            </a>
-          </div>
-        </div>
-      );
-
-      count++;
-
-      if (currentRow.length === itemsPerRow) {
-        newsEvents.push(
-          <div className="flex justify-center space-x-4" key={`row-${news}`}>
-            {currentRow}
-          </div>
-        );
-        currentRow = [];
-      }
-    } else if (count === 12) {
       newsEvents.push(
         <div style={{maxWidth: '300px', wordWrap: 'break-word', marginLeft: "40px"}} key={news}>
           <div className="flex flex-col items-start">
@@ -137,8 +110,52 @@ const displayNews = () => {
           </div>
         </div>
       );
-    }
   }
+
+  // for (let news in newsInfo) {
+  //   if (count < 12) {
+  //     currentRow.push(
+  //       <div style={{maxWidth: '300px', wordWrap: 'break-word', marginLeft: "40px"}} key={news}>
+  //         <div className="flex flex-col items-start">
+  //           <img className="mt-10" src={newsInfo[news][1]} alt="news image" style={imageSize}/>
+  //           <p className="mt-2">{newsInfo[news][3]}</p>
+  //           <p className="mt-2">{newsInfo[news][2]}</p>
+  //         </div>
+  //         <div className="underline mt-2 text-custom-blue">
+  //           <a href={newsInfo[news][0]}>
+  //             {news}
+  //           </a>
+  //         </div>
+  //       </div>
+  //     );
+
+  //     count++;
+
+  //     if (currentRow.length === itemsPerRow) {
+  //       newsEvents.push(
+  //         <div className="flex justify-center space-x-4" key={`row-${news}`}>
+  //           {currentRow}
+  //         </div>
+  //       );
+  //       currentRow = [];
+  //     }
+  //   } else if (count === 12) {
+  //     newsEvents.push(
+  //       <div style={{maxWidth: '300px', wordWrap: 'break-word', marginLeft: "40px"}} key={news}>
+  //         <div className="flex flex-col items-start">
+  //           <img className="mt-10" src={newsInfo[news][1]} alt="news image" style={imageSize}/>
+  //           <p className="mt-2">{newsInfo[news][3]}</p>
+  //           <p className="mt-2">{newsInfo[news][2]}</p>
+  //         </div>
+  //         <div className="underline mt-2 text-custom-blue">
+  //           <a href={newsInfo[news][0]}>
+  //             {news}
+  //           </a>
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // }
 
   return newsEvents;
 };
@@ -147,8 +164,8 @@ const displayNews = () => {
 export default function News() {
   return (
     <div className="bg-slate-800 h-max ">
-      <div className="flex bg-black w-full">
-        <p className="text-custom-blue font-myFont-lemonada font-bold italic text-4xl ml-80">News</p>
+      <div className="flex bg-black w-full items-center">
+        <p className="text-custom-blue font-myFont-lemonada font-bold italic text-4xl m-auto" >News</p>
       </div>
 
       <div className="border-t border-custom-blue"></div>
@@ -158,23 +175,8 @@ export default function News() {
           <img src={News_Logo} width={700} height={200} alt="Net VR Logo" />
         </div>
 
-        <div className="flex">
-          <p style={{ marginRight: '200px' }}>
-            <span>Disrupt Magazine (Tech + Startups)</span>
-          </p>
-          <p style={{ marginLeft: '200px' }}>
-            May 16, 2022
-          </p>
-        </div>
-
-        <p className="mt-2 text-custom-blue">
-          <a href={"https://disruptmagazine.com/kyle-doran-and-the-net-vr-creates-a-unique-and-innovative-experience-for-livestreamers-and-viewers/"}>
-            <u>DKyle Doran and The Net VR Creates a Unique and Innovative Experience for Livestreamers and Viewers</u>
-          </a>
-        </p>
       </div>
 
-      <div className="border-t border-custom-blue"></div>
 
       <motion.div
         className="flex flex-col items-center flex-grow"
@@ -188,10 +190,10 @@ export default function News() {
         </div>
 
       </motion.div>
-      <div className="flex justify-center space-x-4 mt-20 mb-10">
-        <a href={"https://www.youtube.com/watch?v=obaArLqH3-g&ab_channel=TheNetVR"}><img src={GDC_Award} width={220} height={200} alt="GDC Winner 2021" /></a>
-        <a href={"https://www.youtube.com/watch?v=obaArLqH3-g&ab_channel=TheNetVR"}><img src={Best_Tech_Award} width={190} height={200} alt="Best Tech Startups 2022" /></a>
-        <img src={Metaverse_Diagram} width={550} height={200} alt="Metaverse Ecosystem Diagram" />
+      <div className="flex sm:flex-col md:flex-col lg:flex-row items-center flex-wrap justify-center space-x-4 my-5 mx-5">
+        <a href={"https://www.youtube.com/watch?v=obaArLqH3-g&ab_channel=TheNetVR"}><img className="my-5 mx-5" src={GDC_Award} width={220} height={200} alt="GDC Winner 2021" /></a>
+        <a href={"https://www.youtube.com/watch?v=obaArLqH3-g&ab_channel=TheNetVR"}><img className="my-5 mx-5" src={Best_Tech_Award} width={190} height={200} alt="Best Tech Startups 2022" /></a>
+        <img className="my-5 mx-5" src={Metaverse_Diagram} width={550} height={200} alt="Metaverse Ecosystem Diagram" />
       </div>
       <Footer />
     </div>

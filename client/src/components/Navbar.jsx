@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {Link, useNavigate} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import MobileNavbar from "./Modal";
 
 // navbar icons
@@ -55,7 +55,7 @@ export default function Navbar() {
   const goBack = () => {
     let navigate = useNavigate();
     return navigate(-1);
-  }
+  };
   return (
     <div className="sticky top-0 z-50">
       <div className="flex bg-black justify-between h-28">
@@ -81,7 +81,7 @@ export default function Navbar() {
               to={item.href}
               className={classNames(
                 item.current
-                  ? "bg-blue-900 text-white"
+                  ? "bg-sky-600 text-white"
                   : "text-gray-300 hover:bg-gray-700 hover:text-white",
                 "rounded-md px-3 py-10 sm:text-sm md:text-md lg:text-xl font-medium flex items-center h-4/5 text-center"
               )}
