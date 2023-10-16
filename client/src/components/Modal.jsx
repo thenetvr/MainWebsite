@@ -55,7 +55,6 @@ export default function Modal({ navigation, handleNavItemClick }) {
                             {item.name}
                           </p>
                           <p className="text-sm text-gray-500">
-                            testing this thing
                           </p>
                         </div>
                       </Link>
