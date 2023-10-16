@@ -14,17 +14,19 @@ import "react-toastify/dist/ReactToastify.css";
 export default function InfluencerProgram() {
   return (
     <div className="bg-slate-800 h-max">
-      <div className="flex flex-col items-center h-fit lg:px-60 p-10">
+      <div className="flex flex-col items-center h-fit xl:px-60 lg:px-30 p-10">
         <motion.div
+          className="flex flex-col items-center flex-grow"
           variants={pageVariants}
           initial="hidden"
           animate="visible"
           exit="exit"
-          className="w-full"
         >
           <div className="p-8 d-flex">
-            <div className="text-sky-500 text-6xl mb-6">INFLUENCER PROGRAM</div>
-            <div className="mb-10">
+            <div className="sm:text-left text-center text-sky-500 text-6xl mb-8">
+              INFLUENCER PROGRAM
+            </div>
+            <div className="sm:p-1 px-3 mb-10">
               Calling all celebrities, influencers, streamers, content creators
               and performers broadcasting LIVE! We're here to provide access to
               the 3D community creating more engagement in real time. Broadcast
@@ -64,17 +66,17 @@ export default function InfluencerProgram() {
               {/* form */}
               <InfluencerForm />
               {/* toast container */}
-            <ToastContainer
-              position="top-right"
-              autoClose={5000}
-              hideProgressBar={true}
-              newestOnTop
-              closeOnClick
-              rtl={false}
-              pauseOnFocusLoss={false}
-              draggable
-              pauseOnHover
-            />
+              <ToastContainer
+                position="top-right"
+                autoClose={5000}
+                hideProgressBar={true}
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover
+              />
             </div>
           </div>
         </motion.div>

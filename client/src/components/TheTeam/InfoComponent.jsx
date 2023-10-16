@@ -13,13 +13,15 @@ InfoComponent.propTypes = {
 
 export default function InfoComponent({ member }) {
   return (
-    <div className="w-3/4 sm:w-full px-10 sm:text-center lg:text-left">
+    <div className="sm:w-3/4 px-10 lg:text-left w-full">
       {/* person name */}
-      <h1 className="text-3xl uppercase text-sky-500">{member.name}</h1>
+      <h1 className="lg:text-left text-center text-3xl uppercase text-sky-500">
+        {member.name}
+      </h1>
       {/* role */}
-      <p className="text-lg">{member.role}</p>
+      <p className="lg:text-left text-center text-lg">{member.role}</p>
       {/* socials */}
-      <div className="flex mt-2 sm:justify-center lg:justify-start">
+      <div className="flex mt-2 justify-center lg:justify-start">
         <img className={"h-[40px] w-[40px]"} src={LinkedinIcon} />
         <img className={"h-[40px] w-[40px]"} src={TwitterIcon} />
         <img className={"h-[40px] w-[40px]"} src={TwitchIcon} />
@@ -27,7 +29,7 @@ export default function InfoComponent({ member }) {
         <img className={"h-[40px] w-[40px]"} src={TIkTokIcon} />
       </div>
       {/* description */}
-      <div className="mt-7">{member.description}</div>
+      <div className="my-7 lg:text-left text-center">{member.description}</div>
     </div>
   );
 }
