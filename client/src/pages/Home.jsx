@@ -47,16 +47,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex items-center justify-end">
+        <div className="flex-col flex py-10 items-center justify-end">
           <img
             src={HomeTheaterEmpty}
             width={584}
             height={450}
             alt="Home Theater"
-            className="mt-12 mr-40"
+            className="mx-auto"
           />
           <div className="z-10">
-            <div className="flex flex-col">
+            <div className="flex flex-col py-10">
               <p className="mb-16 self-start text-custom-blue text-4xl font-semibold">
                 Welcome To The Net VR
               </p>
@@ -70,9 +70,16 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="flex items-center justify-end">
+        <div className="flex flex-col items-center justify-end">
+          <img
+            src={HomeTheaterFull}
+            width={584}
+            height={450}
+            alt="Home Theater"
+            className="mx-auto"
+          />
           <div className="z-10">
-            <div className="flex flex-col">
+            <div className="flex flex-col py-10">
               <p className="mb-16 self-start text-custom-blue text-4xl font-semibold">
                 Immersive 3D Environments
               </p>
@@ -84,13 +91,6 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <img
-            src={HomeTheaterFull}
-            width={584}
-            height={450}
-            alt="Home Theater"
-            className="mt-16 ml-40 mb-10"
-          />
         </div>
 
         {/*<div>*/}

@@ -4,16 +4,18 @@ import { netVRTheaterPoints } from "../../utils/Constants";
 export default function FeaturesOfVirtualTheater({ listStyling }) {
   const { features } = netVRTheaterPoints;
   return (
-    <div className="grid grid-cols-3 gap-4 mb-10">
-      <div className="text-sky-500 text-3xl">Features Of Virtual Theater</div>
-      <div className="col-span-2">
+    <div className="mb-10 flex flex-col justify-center">
+      <div className="sm:text-left sm:text-3xl text-sky-500 text-2xl text-center">
+        Features Of Virtual Theater
+      </div>
+      <div className="phone:mt-0 mt-4 sm:flex col-span-2">
         <ul
           role="list"
           className={listStyling}
           style={{ listStyleType: "circle" }}
         >
           {features.map((point, idx) => (
-            <li className="w-6/12 pr-6" key={idx}>
+            <li className="phone:w-6/12 w-full pr-6" key={idx}>
               {point}
             </li>
           ))}

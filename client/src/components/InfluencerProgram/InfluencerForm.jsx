@@ -4,7 +4,6 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { urlAPI } from "../../utils/urls";
 
-
 export default function InfluencerForm() {
   const fieldText = "w-64 text-xl bg-slate-50 text-black p-1 rounded";
   const fieldEl = "p-3";
@@ -46,7 +45,7 @@ export default function InfluencerForm() {
         return;
       }
     }
-    axios.post(urlAPI+"/influencerProgramMail", {
+    axios.post(urlAPI + "/influencerProgramMail", {
       firstName: state.firstName,
       lastName: state.lastName,
       emailAddress: state.emailAddress,
@@ -55,7 +54,7 @@ export default function InfluencerForm() {
       totalFollowers: state.totalFollowers,
       streamingChannel: state.streamingChannel,
       twitter: state.twitter,
-    })
+    });
     notify();
     console.log(state);
   };

@@ -17,18 +17,20 @@ export default function TheTeam() {
           animate="visible"
           exit="exit"
         >
-
           <div className="p-8 d-flex">
-            <div className="text-sky-500 text-6xl mb-8">THE NET VR TEAM</div>
-
-            <div className="sm:grid grid-cols-3 gap-4 mb-10 d-flex flex-row">
-              <div className="text-sky-500 text-3xl mb-10">About Us</div>
-              <div className="col-span-2 text-lg">
-                Founded In 2019, We Are A Bootstrap Virtual Reality Developing
-                Company Headquartered In Hillsboro, Oregon. We Are Currently
-                Developing Our First Application, Net VR Theater, Where We Bring
-                Live Streaming And VR (With And Without A Headset) Together.
-                #NoVRVR
+            <div className="sm:text-left text-center text-sky-500 text-6xl mb-8">
+              THE NET VR TEAM
+            </div>
+            <div className="flex justify-center">
+              <div className="sm:grid sm:grid-cols-3 sm:gap-4 sm:w-full w-80 mb-10 d-flex flex-row">
+                <div className="text-sky-500 text-3xl mb-10">About Us</div>
+                <div className="col-span-2 text-lg">
+                  Founded In 2019, We Are A Bootstrap Virtual Reality Developing
+                  Company Headquartered In Hillsboro, Oregon. We Are Currently
+                  Developing Our First Application, Net VR Theater, Where We
+                  Bring Live Streaming And VR (With And Without A Headset)
+                  Together. #NoVRVR
+                </div>
               </div>
             </div>
 
