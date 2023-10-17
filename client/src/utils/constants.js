@@ -239,6 +239,8 @@ import AlanImage from "../assets/ProfilePictures/AlanTuckerImage.jpg";
 import NoahImage from "../assets/ProfilePictures/NoahFajardaImage.png";
 import SarahImage from "../assets/ProfilePictures/SarahKugelmasImage.jpg";
 import YupengImage from "../assets/ProfilePictures/YupengImage.jpeg";
+import RobertImage from "../assets/ProfilePictures/RobertImage.jpeg";
+import UsumeImage from "../assets/ProfilePictures/UsumeImage.jpeg";
 import NoProfile from "../assets/NoProfilePic.png";
 
 export const teamMembers = [
@@ -246,6 +248,7 @@ export const teamMembers = [
     name: "Kyle Doran",
     image: KyleImage,
     role: "Chief executive Officer (CEO)",
+    linkedIn: "https://www.linkedin.com/in/kyle-doran1/",
     description: `Kyle Is Currently The Co-Founder And CEO Of The Net VR. He
       Has A Bachelor Of Science Degree From Oregon State
       University With A Focus In Engineering And Business. Kyle's
@@ -282,6 +285,7 @@ export const teamMembers = [
     name: "David Griffin",
     image: DavidImage,
     position: "Chief Financial Officer (CFO)",
+    linkedIn: "https://www.linkedin.com/feed/",
     description:
       `David Is Currently The CFO Of The Net VR. He Has A Bachelor Of Science Degree From 
       The University Of Oregon, With Majors In Mathematics And Economics And Minors In 
@@ -292,6 +296,7 @@ export const teamMembers = [
     name: "Mike Xie",
     image: MikeImage,
     position: "Chief Technology Officer (CTO)",
+    linkedIn: "https://www.linkedin.com/in/mikexie2/",
     description:
       `Mike is currently the Co-Founder and CTO of the Net VR. He is a UTD alumni and 
       he has played almost every genre of video game and loves to understand the 
@@ -301,6 +306,7 @@ export const teamMembers = [
     name: "Noah Fajarda",
     image: NoahImage,
     position: "Software Developer",
+    linkedIn: "https://www.linkedin.com/in/noah-fajarda/",
     description:
       `Noah is a graduate from the University of California, Irvine. He has experience in 
       developing highly-scalable Full-Stack Applications. He enjoys traveling to different 
@@ -311,6 +317,7 @@ export const teamMembers = [
     name: "Yupeng Zheng",
     image: YupengImage,
     position: "Software Developer",
+    linkedIn: "https://www.linkedin.com/in/yupeng-zheng-5b7957193/",
     description:
       `Yupeng graduated from the University of the Pacific with a Bachelor of Science degree.
        He possesses experience in software development and web application design. 
@@ -320,6 +327,7 @@ export const teamMembers = [
     name: "Sarah Kugelmas",
     image: SarahImage,
     position: "Software Developer",
+    linkedIn: "https://www.linkedin.com/in/sarahkugelmas/",
     description:
       `Sarah graduated from Case Western Reserve University with a Bachelor's of Science 
       in Computer Science. She grew up in New York, went to college in Cleveland, Ohio, 
@@ -330,6 +338,7 @@ export const teamMembers = [
     name: "Samuel Oyeneyin",
     image: NoProfile,
     position: "Software Developer",
+    linkedIn: "https://www.linkedin.com/in/samuel-oyeneyin-738b32245/",
     description:
       `Samuel Oyeneyin is Currently a Software Developer at The NetVR`,
   },
@@ -337,15 +346,41 @@ export const teamMembers = [
     name: "Abdul Hannan",
     image: AbdulImage,
     position: "Software Developer",
+    linkedIn: "https://www.linkedin.com/in/abdul-hannan-0b9364216/",
     description:
       `Hannan is from Karachi, Pakistan. He loves reading novels and cooking (picked up 
         chess these days but things ain't looking good) Being from Pakistan, there aren't
          a lot of people who share his hobbies and interests so he enjoys the internet a lot.`,
   },
   {
+    name: "Alan Tucker",
+    image: AlanImage,
+    position: "Scrum Master",
+    linkedIn: "https://www.linkedin.com/in/alanmtucker/",
+    description:
+      `Alan Tucker is Currently a Scrum Master at The NetVR`,
+  },
+  {
+    name: "Robert Lonergan",
+    image: RobertImage,
+    position: "Social Media Manager",
+    linkedIn: "https://www.linkedin.com/in/robertadenlonergan",
+    description:
+      `Robert Lonergan is Currently a Social Media Manager at The NetVR`,
+  },
+  {
+    name: "Usume Jovi-Usude",
+    image: UsumeImage,
+    position: "Software Developer",
+    linkedIn: "https://www.linkedin.com/in/usume-jovi-usude-98a95119a/",
+    description:
+      `Usume Jovi-Usude is Currently a Software Developer at The NetVR`,
+  },
+  {
     name: "Samuel Gbenga",
     image: NoProfile,
     position: "UI/UX Designer",
+    linkedIn: "https://www.linkedin.com/in/oluwagbenga-samuel-6592a91aa",
     description: `Samuel Gbenga is Currently a Ui/UX Designer at The NetVR`,
   },
 ];
