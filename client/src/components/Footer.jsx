@@ -1,38 +1,29 @@
 import { Link } from "react-router-dom";
-import TwitchIcon from "../assets/twitch.png"
 import TwitterIcon from "../assets/twitter.png"
 import DiscordIcon from "../assets/discord.png"
 import FaceBookIcon from "../assets/facebook.png"
 import InstagramIcon from "../assets/instagram.png"
 import YoutubeIcon from "../assets/youtube.png"
-import NetVrIcon from  "../assets/News_Logo.png"
 export default function Footer() {
-    const pages = {"Influencer Program":"/influencer-program", "Creators":"/creators", "Contact Us":"/contact-us", "Net Vr Theater":
-            "/net-vr-theater", "News": "/news", "The Team":"/the-team"}
-    const icons = [FaceBookIcon, InstagramIcon, TwitterIcon, DiscordIcon, YoutubeIcon]
-    const displayPageNames = () => {
-        const formattedFooter = []
-        for (let pageName in pages) {
-                formattedFooter.push(
-                    <Link to={pages[pageName]}> {pageName} </Link>
-                )
-        }
-        return formattedFooter
-    }
+    const socialMedia = {"https://www.facebook.com/thenetvr":FaceBookIcon, "https://www.instagram.com/thenetvr":InstagramIcon, "https://twitter.com/thenetvr":TwitterIcon, "https://discord.com/invite/DpNy4Ur":DiscordIcon, "https://www.youtube.com/channel/UCWOD7IdEz0z6S-K3Sf6B86Q":YoutubeIcon}
     const displayIcons = () => {
         const formatIcons = []
-        for (let i = 0; i < icons.length; i++) {
+        let i = 0
+        for (let media in socialMedia) {
             // indigo border is faint on some icons so added white border.
-            if (i % 2 !== 0 || i === icons.length - 1) {
+            if (i % 2 !== 0 || i === Object.keys(socialMedia).length - 1) {
                 formatIcons.push(
-                    <img className="border h-[40px] w-[40px] mx-[20px] bg-indigo-500 rounded-full" src={icons[i]}
-                         alt={"can't display"}/>)
+                    <Link to={media}>
+                    <img className="border h-[40px] w-[40px] mx-[20px] bg-indigo-500 rounded-full" src={socialMedia[media]}
+                         alt={"can't display"}/></Link>)
             }
             else {
                 formatIcons.push(
-                <img className="h-[40px] w-[40px] mx-[20px] bg-indigo-500 rounded-full" src={icons[i]}
-                         alt={"can't display"}/>)
+                <Link to={media}>
+                <img className="h-[40px] w-[40px] mx-[20px] bg-indigo-500 rounded-full" src={socialMedia[media]}
+                     alt={"can't display"}/> </Link>)
             }
+            i++
         }
         return formatIcons
     }
@@ -45,18 +36,13 @@ export default function Footer() {
               width={70}
             />
         </div>
-        <div className="h-16 bg flex flex-row items-center justify-center">
-            <div className="flex space-x-4">
-                {displayPageNames()}
-            </div>
-        </div>
         <div className>
             <div className="flex justify-center">
                 {displayIcons()}
             </div>
         </div>
         <div>
-            <p className={"text-center mt-[20px]"}>Contact: Info@the netvr.com <span className="ml-[15px]">Address: Austin,Tx, 78701</span></p>
+            <p className={"text-center mt-[20px]"}>Contact: Info@the netvr.com <span className="ml-[15px]">Address: Austin, Tx, 78701</span></p>
         </div>
         <div className="h-24 text-center mb-0 bg-black flex flex-col items-center justify-center">
             <Link to="/privacy-policy"> <em>Privacy Policy</em></Link>
