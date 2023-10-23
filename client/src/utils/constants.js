@@ -241,6 +241,8 @@ import SarahImage from "../assets/ProfilePictures/SarahKugelmasImage.jpg";
 import YupengImage from "../assets/ProfilePictures/YupengImage.jpeg";
 import RobertImage from "../assets/ProfilePictures/RobertImage.jpeg";
 import UsumeImage from "../assets/ProfilePictures/UsumeImage.jpeg";
+import SamuelOImage from "../assets/ProfilePictures/SamuelOyeneyinImage.jpg";
+import SamuelGImage from "../assets/ProfilePictures/SamuelGbengaImage.jpg";
 import NoProfile from "../assets/NoProfilePic.png";
 
 export const teamMembers = [
@@ -336,11 +338,13 @@ export const teamMembers = [
 
   {
     name: "Samuel Oyeneyin",
-    image: NoProfile,
+    image: SamuelOImage,
     position: "Software Developer",
     linkedIn: "https://www.linkedin.com/in/samuel-oyeneyin-738b32245/",
     description:
-      `Samuel Oyeneyin is Currently a Software Developer at The NetVR`,
+      `Samuel is a student at University of Maryland Baltimore Couty. 
+      He has experience in web development and web design. He enjoys playing
+       video games and drawing in his free time.`,
   },
   {
     name: "Abdul Hannan",
@@ -358,7 +362,9 @@ export const teamMembers = [
     position: "Scrum Master",
     linkedIn: "https://www.linkedin.com/in/alanmtucker/",
     description:
-      `Alan Tucker is Currently a Scrum Master at The NetVR`,
+      `Alan is an energetic project manager. He is fascinated with technology and 
+      its impact on human psychology. He is currently seeking a Masters of 
+      Human Computer Interaction at Iowa State University.`,
   },
   {
     name: "Robert Lonergan",
@@ -366,7 +372,9 @@ export const teamMembers = [
     position: "Social Media Manager",
     linkedIn: "https://www.linkedin.com/in/robertadenlonergan",
     description:
-      `Robert Lonergan is Currently a Social Media Manager at The NetVR`,
+      `Robert is a student at the University of Texas at Dallas with a Bachelor's Degree
+       in IT with a focus in cyber security. They hope to be a cyber security analyst and 
+       currently work as the social media manager and documenter.`,
   },
   {
     name: "Usume Jovi-Usude",
@@ -374,13 +382,18 @@ export const teamMembers = [
     position: "Software Developer",
     linkedIn: "https://www.linkedin.com/in/usume-jovi-usude-98a95119a/",
     description:
-      `Usume Jovi-Usude is Currently a Software Developer at The NetVR`,
+      `Usume is a graduate from California State University Chico with a 
+      Bachelor's of Science in Game Development. He enjoys travel and the 
+      occasional round of golf`,
   },
   {
     name: "Samuel Gbenga",
-    image: NoProfile,
+    image: SamuelGImage,
     position: "UI/UX Designer",
     linkedIn: "https://www.linkedin.com/in/oluwagbenga-samuel-6592a91aa",
-    description: `Samuel Gbenga is Currently a Ui/UX Designer at The NetVR`,
+    description: `Samuel is a student at the University of Lagos. He is a 
+    fun-loving, hilarious guy that simply loves design. He also loves to 
+    watch limited series and he is the guy you want by your side when it is 
+    time to cook a great dish.`,
   },
 ];
