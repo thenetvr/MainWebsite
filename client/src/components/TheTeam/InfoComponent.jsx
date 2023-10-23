@@ -1,9 +1,5 @@
 // icons
 import LinkedinIcon from "../../assets/linkedin.png";
-import TwitterIcon from "../../assets/twitter.png";
-import TwitchIcon from "../../assets/twitch.png";
-import DiscordIcon from "../../assets/discord.png";
-import TIkTokIcon from "../../assets/tik-tok.png";
 // prop types
 import { PropTypes } from "prop-types";
 
@@ -22,11 +18,14 @@ export default function InfoComponent({ member }) {
       <p className="lg:text-left text-center text-lg">{member.role}</p>
       {/* socials */}
       <div className="flex mt-2 justify-center lg:justify-start">
-        <img className={"h-[40px] w-[40px]"} src={LinkedinIcon} />
-        <img className={"h-[40px] w-[40px]"} src={TwitterIcon} />
-        <img className={"h-[40px] w-[40px]"} src={TwitchIcon} />
-        <img className={"h-[40px] w-[40px]"} src={DiscordIcon} />
-        <img className={"h-[40px] w-[40px]"} src={TIkTokIcon} />
+        <a href={member.linkedIn} rel="noreferrer" target="_blank">
+          <img
+            className={
+              "h-[40px] w-[40px] hover:opacity-30 ease-in-out duration-300"
+            }
+            src={LinkedinIcon}
+          />
+        </a>
       </div>
       {/* description */}
       <div className="my-7 lg:text-left text-center">{member.description}</div>
