@@ -1,4 +1,4 @@
-import { netVRTheaterPoints } from "../../utils/Constants";
+import { netVRTheaterPoints } from "../../utils/constants";
 import ListValues from "./listValues";
 
 // eslint-disable-next-line react/prop-types

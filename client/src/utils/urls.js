@@ -1,1 +1,1 @@
-export const urlAPI = "http://localhost:8080"
+export const urlAPI = "thenetvr.com:8080"
