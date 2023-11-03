@@ -15,7 +15,7 @@ import {
   transferOfYourPersonalData,
   deleteYourPersonalData,
   legalRequirements,
-} from "../utils/Constants";
+} from "../utils/constants";
 
 export default function Policy() {
   const header = "text-sky-500 text-4xl font-normal pb-8";

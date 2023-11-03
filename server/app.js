@@ -2,14 +2,14 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const cors = require('cors');
+// const cors = require('cors');
 require('dotenv').config();
 // app
 const app = express();
 
 // db
 app.use(morgan("dev"));
-app.use(cors({ origin: true, credentials: true }));
+// app.use(cors({ origin: true, credentials: true }));
 
 // middleware
 app.use(express.json());

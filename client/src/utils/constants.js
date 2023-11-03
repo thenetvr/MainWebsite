@@ -315,16 +315,16 @@ export const teamMembers = [
       countries, analyzing and playing different sports. 
       Link to Website: https://noahfajarda.vercel.app/`,
   },
-  {
-    name: "Yupeng Zheng",
-    image: YupengImage,
-    position: "Software Developer",
-    linkedIn: "https://www.linkedin.com/in/yupeng-zheng-5b7957193/",
-    description:
-      `Yupeng graduated from the University of the Pacific with a Bachelor of Science degree.
-       He possesses experience in software development and web application design. 
-       He is both a technology lover and a car enthusiast.`,
-  },
+  // {
+  //   name: "Yupeng Zheng",
+  //   image: YupengImage,
+  //   position: "Software Developer",
+  //   linkedIn: "https://www.linkedin.com/in/yupeng-zheng-5b7957193/",
+  //   description:
+  //     `Yupeng graduated from the University of the Pacific with a Bachelor of Science degree.
+  //      He possesses experience in software development and web application design. 
+  //      He is both a technology lover and a car enthusiast.`,
+  // },
   {
     name: "Sarah Kugelmas",
     image: SarahImage,
@@ -346,16 +346,16 @@ export const teamMembers = [
       He has experience in web development and web design. He enjoys playing
        video games and drawing in his free time.`,
   },
-  {
-    name: "Abdul Hannan",
-    image: AbdulImage,
-    position: "Software Developer",
-    linkedIn: "https://www.linkedin.com/in/abdul-hannan-0b9364216/",
-    description:
-      `Hannan is from Karachi, Pakistan. He loves reading novels and cooking (picked up 
-        chess these days but things ain't looking good) Being from Pakistan, there aren't
-         a lot of people who share his hobbies and interests so he enjoys the internet a lot.`,
-  },
+  // {
+  //   name: "Abdul Hannan",
+  //   image: AbdulImage,
+  //   position: "Software Developer",
+  //   linkedIn: "https://www.linkedin.com/in/abdul-hannan-0b9364216/",
+  //   description:
+  //     `Hannan is from Karachi, Pakistan. He loves reading novels and cooking (picked up 
+  //       chess these days but things ain't looking good) Being from Pakistan, there aren't
+  //        a lot of people who share his hobbies and interests so he enjoys the internet a lot.`,
+  // },
   {
     name: "Alan Tucker",
     image: AlanImage,

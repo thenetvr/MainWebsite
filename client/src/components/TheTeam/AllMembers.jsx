@@ -6,7 +6,7 @@ import {
   fadeInRightVariants,
 } from "../../utils/framerMotionVariants";
 // constants & components
-import { teamMembers } from "../../utils/Constants";
+import { teamMembers } from "../../utils/constants";
 import InfoComponent from "./InfoComponent";
 
 export default function AllMembers() {
